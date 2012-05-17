@@ -6,5 +6,5 @@ package eu.javaspecialists.tjsn.concurrency.stripedexecutor;
  * object, rather than its hash code and equals.
  */
 public interface StripedObject {
-  Object getStripe();
+    Object getStripe();
 }
