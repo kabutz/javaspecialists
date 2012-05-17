@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c447008-9653-4c89-b48a-29e2b5e8cf7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedExecutorService.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedExecutorService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedObject.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedExecutorServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedExecutorServiceTest.java" />
-    </list>
+    <list default="true" id="5c447008-9653-4c89-b48a-29e2b5e8cf7c" name="Default" comment="" />
     <ignored path="javaspecialists.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
