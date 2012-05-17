@@ -4,13 +4,31 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.locks.*;
 
+/**
+ * The StripedExecutorService accepts Runnable/Callable objects
+ * that also implement the StripedObject interface.  It executes
+ * all the tasks for a single "stripe" consecutively.
+ * <p/>
+ * In this version, submitted tasks do not necessarily have to
+ * implement the StripedObject interface.  If they do not, then
+ * they will simply be passed onto the wrapped ExecutorService
+ * directly.
+ * <p/>
+ * Idea inspired by Glenn McGregor on the Concurrency-interest
+ * mailing list and using the SerialExecutor presented in the
+ * Executor interface's JavaDocs.
+ * <p/>
+ * http://cs.oswego.edu/mailman/listinfo/concurrency-interest
+ *
+ * @author Dr Heinz M. Kabutz
+ */
 public class StripedExecutorService extends AbstractExecutorService {
   private final ExecutorService executor;
   private final ReentrantLock lock = new ReentrantLock();
   private final Condition terminating = lock.newCondition();
 
-  private final Map<IdentityKey, SerialExecutor> executors =
-      new HashMap<>();
+  private final Map<Object, SerialExecutor> executors =
+      new IdentityHashMap<>();
 
   private State state = State.RUNNING;
 
@@ -90,10 +108,9 @@ public class StripedExecutorService extends AbstractExecutorService {
       checkPoolIsRunning();
       Object stripe = getStripe(command);
       if (stripe != null) {
-        IdentityKey key = new IdentityKey(stripe);
-        SerialExecutor ser_exec = executors.get(key);
+        SerialExecutor ser_exec = executors.get(stripe);
         if (ser_exec == null) {
-          executors.put(key, ser_exec = new SerialExecutor(stripe));
+          executors.put(stripe, ser_exec = new SerialExecutor(stripe));
           System.out.println("SerialExecutor created for " + stripe);
         }
         ser_exec.execute(command);
@@ -134,12 +151,11 @@ public class StripedExecutorService extends AbstractExecutorService {
   }
 
   private void removeEmptySerialExecutor(Object stripe, SerialExecutor ser_ex) {
-    IdentityKey key = new IdentityKey(stripe);
-    assert ser_ex == executors.get(key);
+    assert ser_ex == executors.get(stripe);
     assert lock.isHeldByCurrentThread();
     assert ser_ex.isEmpty();
 
-    executors.remove(key);
+    executors.remove(stripe);
     terminating.signalAll();
     if (state == State.SHUTDOWN && executors.isEmpty()) {
       executor.shutdown();
@@ -263,23 +279,6 @@ public class StripedExecutorService extends AbstractExecutorService {
       } finally {
         lock.unlock();
       }
-    }
-  }
-
-  private static class IdentityKey {
-    private final Object key;
-
-    IdentityKey(Object key) {
-      this.key = key;
-    }
-
-    public boolean equals(Object o) {
-      if (!(o instanceof IdentityKey)) return false;
-      return key == ((IdentityKey) o).key;
-    }
-
-    public int hashCode() {
-      return System.identityHashCode(key);
     }
   }
 
