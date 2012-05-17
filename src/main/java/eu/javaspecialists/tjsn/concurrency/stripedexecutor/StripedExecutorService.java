@@ -5,18 +5,16 @@ import java.util.concurrent.*;
 import java.util.concurrent.locks.*;
 
 /**
- * The StripedExecutorService accepts Runnable/Callable objects
- * that also implement the StripedObject interface.  It executes
- * all the tasks for a single "stripe" consecutively.
+ * The StripedExecutorService accepts Runnable/Callable objects that also
+ * implement the StripedObject interface.  It executes all the tasks for a
+ * single "stripe" consecutively.
  * <p/>
- * In this version, submitted tasks do not necessarily have to
- * implement the StripedObject interface.  If they do not, then
- * they will simply be passed onto the wrapped ExecutorService
- * directly.
+ * In this version, submitted tasks do not necessarily have to implement the
+ * StripedObject interface.  If they do not, then they will simply be passed
+ * onto the wrapped ExecutorService directly.
  * <p/>
- * Idea inspired by Glenn McGregor on the Concurrency-interest
- * mailing list and using the SerialExecutor presented in the
- * Executor interface's JavaDocs.
+ * Idea inspired by Glenn McGregor on the Concurrency-interest mailing list and
+ * using the SerialExecutor presented in the Executor interface's JavaDocs.
  * <p/>
  * http://cs.oswego.edu/mailman/listinfo/concurrency-interest
  *
@@ -37,10 +35,10 @@ public class StripedExecutorService extends AbstractExecutorService {
     }
 
     /**
-     * The default submit() method creates a new FutureTask and
-     * wraps our StripedRunnable with it.  We thus need to remember
-     * the stripe object somewhere.  In our case, we will do this
-     * inside the ThreadLocal "stripes".
+     * The default submit() method creates a new FutureTask and wraps our
+     * StripedRunnable with it.  We thus need to remember the stripe object
+     * somewhere.  In our case, we will do this inside the ThreadLocal
+     * "stripes".
      */
     private final static ThreadLocal<Object> stripes =
             new ThreadLocal<>();
@@ -123,9 +121,9 @@ public class StripedExecutorService extends AbstractExecutorService {
     }
 
     /**
-     * We get the stripe object either from the Runnable if it also
-     * implements StripedObject, or otherwise from the thread local
-     * temporary storage.  Result may be null.
+     * We get the stripe object either from the Runnable if it also implements
+     * StripedObject, or otherwise from the thread local temporary storage.
+     * Result may be null.
      */
     private Object getStripe(Runnable command) {
         Object stripe;
