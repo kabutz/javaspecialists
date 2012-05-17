@@ -6,6 +6,10 @@ import java.util.*;
 import java.util.concurrent.*;
 
 /**
+ * Blinker shows how we can use the Java 7 Phaser to coordinate threads and also
+ * at the same time count how many phases we have been through (hence the
+ * name).
+ * <p/>
  * Demo class from http://www.javaspecialists.eu/archive/Issue198.html
  *
  * @author Dr Heinz M. Kabutz
