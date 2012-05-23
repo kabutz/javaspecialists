@@ -230,4 +230,17 @@ public class FibonacciTest {
             }
         }
     }
+
+    @Test
+    public void testParallelExecution() throws InterruptedException {
+        ForkJoinPool pool = new ForkJoinPool(128);
+        Fibonacci fib = new FibonacciRecursiveParallelDijkstraKaratsuba(pool);
+        long time = System.currentTimeMillis();
+        fib.calculate(2_000_000);
+        time = System.currentTimeMillis() - time;
+        System.out.println("Solved fib(10_000_000) in " + time + "ms parallel");
+        System.out.println(pool);
+        assertEquals(128, pool.getParallelism());
+        pool.shutdown();
+    }
 }
