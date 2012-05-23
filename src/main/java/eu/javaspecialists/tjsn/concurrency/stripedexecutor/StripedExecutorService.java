@@ -206,7 +206,6 @@ public class StripedExecutorService extends AbstractExecutorService {
                 terminating.awaitNanos(remainingTime);
             }
             if (remainingTime <= 0) return false;
-
             if (executors.isEmpty()) {
                 return executor.awaitTermination(remainingTime, TimeUnit.NANOSECONDS);
             }
@@ -217,7 +216,7 @@ public class StripedExecutorService extends AbstractExecutorService {
 
     }
 
-    private static boolean DEBUG = true;
+    private static boolean DEBUG = false;
 
     private class SerialExecutor implements Executor {
         private final BlockingQueue<Runnable> tasks = new LinkedBlockingQueue<>();
@@ -226,7 +225,9 @@ public class StripedExecutorService extends AbstractExecutorService {
 
         private SerialExecutor(Object stripe) {
             this.stripe = stripe;
-            System.out.println("SerialExecutor created for " + stripe);
+            if (DEBUG) {
+                System.out.println("SerialExecutor created for " + stripe);
+            }
         }
 
         protected void finalize() throws Throwable {
