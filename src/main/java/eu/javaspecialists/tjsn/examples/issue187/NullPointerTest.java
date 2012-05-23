@@ -2,6 +2,11 @@ package eu.javaspecialists.tjsn.examples.issue187;
 
 import java.util.*;
 
+/**
+ * Demonstrates how null pointer exceptions are eliminated by the JVM.
+ *
+ * @author Dr Heinz M. Kabutz
+ */
 public class NullPointerTest extends DuplicateExceptionChecker {
     private final Object[] randomObjects =
             new Object[1000 * 1000];

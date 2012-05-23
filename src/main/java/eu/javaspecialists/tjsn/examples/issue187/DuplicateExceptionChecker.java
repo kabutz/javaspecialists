@@ -2,6 +2,11 @@ package eu.javaspecialists.tjsn.examples.issue187;
 
 import java.util.*;
 
+/**
+ * Checks whether we have seen duplicate instances of exceptions being thrown.
+ *
+ * @author Dr Heinz M. Kabutz
+ */
 public class DuplicateExceptionChecker {
     private final IdentityHashMap<Exception, Boolean> previous =
             new IdentityHashMap<>();

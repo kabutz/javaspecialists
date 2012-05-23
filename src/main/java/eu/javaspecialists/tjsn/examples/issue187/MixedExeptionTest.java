@@ -2,6 +2,11 @@ package eu.javaspecialists.tjsn.examples.issue187;
 
 import java.util.*;
 
+/**
+ * Demonstrates different exceptions being eliminated by the JVM.
+ *
+ * @author Dr Heinz M. Kabutz
+ */
 public class MixedExeptionTest extends DuplicateExceptionChecker {
     private static final Object[] randomObjects =
             new Object[1000 * 1000];

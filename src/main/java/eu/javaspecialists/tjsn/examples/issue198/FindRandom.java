@@ -3,7 +3,7 @@ package eu.javaspecialists.tjsn.examples.issue198;
 /**
  * Demo class from http://www.javaspecialists.eu/archive/Issue198.html
  *
- * @author Dr Wolfgang Laun
+ * @author Dr Wolfgang Laun, Dr Heinz M. Kabutz
  */
 public class FindRandom {
     private final static long multiplier = 0x5DEECE66DL;
@@ -20,12 +20,14 @@ public class FindRandom {
     }
 
     /**
-     * A random double is composed from two successive random integers. The most
+     * A random double is composed from two successive random integers. The
+     * most
      * significant 26 bits of the first one are taken and concatenated with the
      * most significant 27 bits of the second one. (ms(ri1,26)) << 27 +
      * (ms(ri2,27)) This is divided by (double)(1L << 53) to obtain a result in
      * [0.0, 1.0). To find the maximum random double, we assume that
-     * (ms(ri1,m26)) is a maximum (all 1b) and vary the remaining 22 bits from 0
+     * (ms(ri1,m26)) is a maximum (all 1b) and vary the remaining 22 bits from
+     * 0
      * to m22, inclusive. Assuming this to be ri1, we perform the calculation
      * according to Random.next() to obtain is successor, our ri2. The maximum
      * of the most significant 27 bits of all ri2 would then be the second part

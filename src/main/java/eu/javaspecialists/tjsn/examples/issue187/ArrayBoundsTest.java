@@ -2,6 +2,12 @@ package eu.javaspecialists.tjsn.examples.issue187;
 
 import java.util.*;
 
+/**
+ * Demonstrates how array bound exceptions eventually are eliminated by the
+ * JVM.
+ *
+ * @author Dr Heinz M. Kabutz
+ */
 public class ArrayBoundsTest extends DuplicateExceptionChecker {
     private static final Object[] randomObjects =
             new Object[1000 * 1000];
