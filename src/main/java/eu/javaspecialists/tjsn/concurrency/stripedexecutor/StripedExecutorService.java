@@ -109,7 +109,6 @@ public class StripedExecutorService extends AbstractExecutorService {
                 SerialExecutor ser_exec = executors.get(stripe);
                 if (ser_exec == null) {
                     executors.put(stripe, ser_exec = new SerialExecutor(stripe));
-                    System.out.println("SerialExecutor created for " + stripe);
                 }
                 ser_exec.execute(command);
             } else {
