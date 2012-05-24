@@ -20,14 +20,22 @@ import static eu.javaspecialists.tjsn.math.numbers.BigIntegerUtils.*;
  * 7006652
  * </ol>
  * <p/>
+ * The threshold for when we use Karatsuba vs when we can use BigInteger
+ * multiply() is by default 1000, but can be changed with the system property
+ * eu.javaspecialists.tjsn.math.numbers.BasicKaratsubaThreshold.  For
+ * example to set the threshold to 2000, start the JVM with flag
+ * -Deu.javaspecialists.tjsn.math.numbers.BasicKaratsubaThreshold=2000
+ * <p/>
  * Algorithm also described in Introduction to Programming in Java, ISBN
- * 0321498054
+ * 0321498054.
  *
  * @author Dr Heinz M. Kabutz
  */
 public class BasicKaratsuba implements Karatsuba {
-    private final static BigInteger ZERO = new BigInteger("0");
-    static final int THRESHOLD = 1000;
+    public static final String THRESHOLD_PROPERTY_NAME =
+            "eu.javaspecialists.tjsn.math.numbers.BasicKaratsubaThreshold";
+    private static final int THRESHOLD = Integer.getInteger(
+            THRESHOLD_PROPERTY_NAME, 1000);
 
     public BigInteger multiply(BigInteger x, BigInteger y) {
         int m = java.lang.Math.min(x.bitLength(), y.bitLength()) / 2;

@@ -8,11 +8,20 @@ import static eu.javaspecialists.tjsn.math.numbers.BigIntegerUtils.*;
 /**
  * The ParallelKaratsuba breaks the number into smaller chunks and then solves
  * it in parallel using fork/join and recursive decomposition.
+ * <p/>
+ * The threshold for when we use Karatsuba vs when we can use BigInteger
+ * multiply() is by default 1000, but can be changed with the system property
+ * eu.javaspecialists.tjsn.math.numbers.ParallelKaratsubaThreshold.  For
+ * example to set the threshold to 2000, start the JVM with flag
+ * -Deu.javaspecialists.tjsn.math.numbers.ParallelKaratsubaThreshold=2000
  *
  * @author Dr Heinz M. Kabutz
  */
 public class ParallelKaratsuba implements Karatsuba {
-    private static final int THRESHOLD = 1000;
+    public static final String THRESHOLD_PROPERTY_NAME =
+            "eu.javaspecialists.tjsn.math.numbers.ParallelKaratsubaThreshold";
+    private static final int THRESHOLD = Integer.getInteger(
+            THRESHOLD_PROPERTY_NAME, 1000);
     private final ForkJoinPool pool;
 
     public ParallelKaratsuba(ForkJoinPool pool) {
@@ -29,7 +38,6 @@ public class ParallelKaratsuba implements Karatsuba {
         public KaratsubaTask(BigInteger x, BigInteger y) {
             this.x = x;
             this.y = y;
-
         }
 
         protected BigInteger compute() {
