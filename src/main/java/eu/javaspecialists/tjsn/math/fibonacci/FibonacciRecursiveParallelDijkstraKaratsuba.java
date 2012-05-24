@@ -13,11 +13,20 @@ import java.util.concurrent.*;
  * the cores in the machine and is thus able to achieve good speedups.  Both
  * the sum-of-the-squares Fibonacci algorithm and Karatsuba take advantage of
  * parallelism.
+ * <p/>
+ * The threshold for when we use a sequential vs parallel solution for
+ * Fibonacci is by default 10000, but can be changed with the system property
+ * eu.javaspecialists.tjsn.math.fibonacci.SequentialThreshold.  For
+ * example to set the threshold to 20000, start the JVM with flag
+ * -Deu.javaspecialists.tjsn.math.fibonacci.SequentialThreshold=20000
  *
  * @author Dr Heinz M. Kabutz
  */
 public class FibonacciRecursiveParallelDijkstraKaratsuba extends NonCachingFibonacci {
-    private final static int SEQUENTIAL_THRESHOLD = 10000;
+    public static final String SEQUENTIAL_THRESHOLD_PROPERTY_NAME =
+            "eu.javaspecialists.tjsn.math.fibonacci.SequentialThreshold";
+    private final static int SEQUENTIAL_THRESHOLD = Integer.getInteger(
+            SEQUENTIAL_THRESHOLD_PROPERTY_NAME, 10000);
     private final FibonacciCache cache = new FibonacciCache();
     private final Fibonacci sequential =
             new FibonacciRecursiveDijkstraKaratsuba();
