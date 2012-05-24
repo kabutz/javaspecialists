@@ -26,7 +26,7 @@ public class FibonacciFormulaBigInteger extends NonCachingFibonacci {
         if (Thread.interrupted()) throw new InterruptedException();
         if (n < 0) throw new IllegalArgumentException();
         if (n > MAXIMUM_PRECISE_NUMBER) throw new IllegalArgumentException(
-                "Precision loss after 71");
+                "Precision loss after " + MAXIMUM_PRECISE_NUMBER);
 
         BigDecimal phiToTheN = PHI.pow(n);
         if (Thread.interrupted()) throw new InterruptedException();
