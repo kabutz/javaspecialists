@@ -18,5 +18,6 @@ public abstract class NonCachingFibonacci extends Fibonacci {
         throw new UnsupportedOperationException();
     }
 
-    public abstract BigInteger calculate(int n) throws InterruptedException;
+    public abstract BigInteger calculate(int n)
+            throws InterruptedException;
 }

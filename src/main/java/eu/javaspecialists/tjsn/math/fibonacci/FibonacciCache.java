@@ -23,7 +23,6 @@ class FibonacciCache {
     private final ConcurrentMap<Integer, BigInteger> cache =
             new ConcurrentHashMap<>();
 
-    private final static boolean withReservation = false;
     private final Lock lock = new ReentrantLock();
     private final Condition solutionArrived = lock.newCondition();
     private final Set<Integer> cacheReservation = new HashSet<>();
@@ -31,11 +30,9 @@ class FibonacciCache {
     public BigInteger get(int n) throws InterruptedException {
         lock.lock();
         try {
-            if (withReservation) {
-                while (cacheReservation.contains(n)) {
-                    // we now want to wait until the answer is in the cache
-                    solutionArrived.await();
-                }
+            while (cacheReservation.contains(n)) {
+                // we now want to wait until the answer is in the cache
+                solutionArrived.await();
             }
             BigInteger result = cache.get(n);
             if (result != null) {
@@ -77,14 +74,5 @@ class FibonacciCache {
         } finally {
             lock.unlock();
         }
-    }
-
-    /**
-     * Resets the cache of intermittent values.  This should not clear the
-     * cacheReservation map as we might have threads waiting for values that
-     * are being calculated.
-     */
-    public void reset() {
-        cache.clear();
     }
 }

@@ -5,7 +5,8 @@ import eu.javaspecialists.tjsn.math.fibonacci.*;
 import java.util.concurrent.*;
 
 public class FibonacciGeneratorExample {
-    static ForkJoinPool pool = new ForkJoinPool(16);
+    private static ForkJoinPool pool = new ForkJoinPool(
+            Runtime.getRuntime().availableProcessors() * 4);
 
     public static void main(String[] args) throws InterruptedException {
         int[] ns;
@@ -18,8 +19,8 @@ public class FibonacciGeneratorExample {
             ns = new int[]{
                     1_000_000,
                     10_000_000,
-//                    100_000_000, // takes a bit long
-//                    1000_000_000, // takes a bit long
+                    100_000_000, // takes a bit long
+                    1000_000_000, // takes a bit long
             };
         }
         test(new FibonacciRecursiveParallelDijkstraKaratsuba(pool), ns);

@@ -30,11 +30,4 @@ public abstract class Fibonacci {
 
     protected abstract BigInteger doActualCalculate(int n)
             throws InterruptedException;
-
-    /**
-     * Resets the cache of intermittent values.
-     */
-    public void reset() {
-        cache.reset();
-    }
 }
