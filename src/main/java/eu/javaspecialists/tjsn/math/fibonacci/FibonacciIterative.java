@@ -11,6 +11,7 @@ import java.math.*;
  */
 public class FibonacciIterative extends NonCachingFibonacci {
     public BigInteger calculate(int n) throws InterruptedException {
+        if (n < 0) throw new IllegalArgumentException();
         BigInteger n0 = BigInteger.ZERO;
         BigInteger n1 = BigInteger.ONE;
         for (int i = 0; i < n; i++) {
