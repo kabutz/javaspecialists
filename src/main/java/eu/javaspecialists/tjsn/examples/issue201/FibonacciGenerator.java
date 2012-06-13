@@ -23,6 +23,11 @@ import eu.javaspecialists.tjsn.math.fibonacci.*;
 import java.math.*;
 import java.util.zip.*;
 
+/**
+ * Demo class from http://www.javaspecialists.eu/archive/Issue201.html
+ *
+ * @author Dr Heinz M. Kabutz
+ */
 public class FibonacciGenerator {
     private final Fibonacci fib;
 
