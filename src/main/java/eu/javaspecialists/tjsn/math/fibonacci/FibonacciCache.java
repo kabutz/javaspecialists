@@ -18,10 +18,10 @@
 
 package eu.javaspecialists.tjsn.math.fibonacci;
 
+import eu.javaspecialists.tjsn.concurrency.util.*;
+
 import java.math.*;
-import java.util.*;
 import java.util.concurrent.*;
-import java.util.concurrent.locks.*;
 
 /**
  * A cache specific for Fibonacci numbers.  It contains the optimization that
@@ -35,62 +35,36 @@ import java.util.concurrent.locks.*;
  * thread B will wait until thread A has put the value in the cache before
  * returning the value.  This prevents duplicate numbers being calculated.
  *
- * @author Dr Heinz M. Kabutz
+ * @author Dr Heinz M. Kabutz, Joe Bowbeer
  */
-class FibonacciCache {
-    private final ConcurrentMap<Integer, BigInteger> cache =
+final class FibonacciCache {
+    private final ConcurrentMap<Integer, FutureResult<BigInteger>> cache =
             new ConcurrentHashMap<>();
 
-    private final Lock lock = new ReentrantLock();
-    private final Condition solutionArrived = lock.newCondition();
-    private final Set<Integer> cacheReservation = new HashSet<>();
-
     public BigInteger get(int n) throws InterruptedException {
-        lock.lock();
-        try {
-            while (cacheReservation.contains(n)) {
-                // we now want to wait until the answer is in the cache
-                solutionArrived.await();
-            }
-            BigInteger result = cache.get(n);
-            if (result != null) {
-                return result;
-            }
-
-            BigInteger nMinusOne = cache.get(n - 1);
-            BigInteger nMinusTwo = cache.get(n - 2);
-            if (nMinusOne != null && nMinusTwo != null) {
-                result = nMinusOne.add(nMinusTwo);
-                put(n, result);
-                return result;
-            }
-            BigInteger nPlusOne = cache.get(n + 1);
-            BigInteger nPlusTwo = cache.get(n + 2);
-            if (nPlusOne != null && nPlusTwo != null) {
-                result = nPlusTwo.subtract(nPlusOne);
-                put(n, result);
-                return result;
-            }
-            if (nPlusOne != null && nMinusOne != null) {
-                result = nPlusOne.subtract(nMinusOne);
-                put(n, result);
-                return result;
-            }
-            cacheReservation.add(n);
-            return null;
-        } finally {
-            lock.unlock();
+        FutureResult<BigInteger> result = new FutureResult<>();
+        FutureResult<BigInteger> pending = cache.putIfAbsent(n, result);
+        if (pending != null) {
+            return pending.get();
         }
+        FutureResult<BigInteger> nMinusOne = cache.get(n - 1);
+        FutureResult<BigInteger> nMinusTwo = cache.get(n - 2);
+        if (nMinusOne != null && nMinusTwo != null) {
+            return put(n, nMinusOne.get().add(nMinusTwo.get()));
+        }
+        FutureResult<BigInteger> nPlusOne = cache.get(n + 1);
+        FutureResult<BigInteger> nPlusTwo = cache.get(n + 2);
+        if (nPlusOne != null && nPlusTwo != null) {
+            return put(n, nPlusTwo.get().subtract(nPlusOne.get()));
+        }
+        if (nPlusOne != null && nMinusOne != null) {
+            return put(n, nPlusOne.get().subtract(nMinusOne.get()));
+        }
+        return null;
     }
 
-    public void put(int n, BigInteger value) {
-        lock.lock();
-        try {
-            solutionArrived.signalAll();
-            cacheReservation.remove(n);
-            cache.putIfAbsent(n, value);
-        } finally {
-            lock.unlock();
-        }
+    public BigInteger put(int n, BigInteger value) {
+        cache.get(n).set(value);
+        return value;
     }
 }
