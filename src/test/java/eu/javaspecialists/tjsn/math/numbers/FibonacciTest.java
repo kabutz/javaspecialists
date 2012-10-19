@@ -35,21 +35,7 @@ import static junit.framework.Assert.*;
  * @author Dr Heinz M. Kabutz
  */
 public class FibonacciTest {
-    private static ForkJoinPool pool;
-
-    @BeforeClass
-    public static void setupPool() {
-        System.out.println("ForkJoinPool created for " +
-                Runtime.getRuntime().availableProcessors() + " threads");
-        pool = new ForkJoinPool(Runtime.getRuntime().availableProcessors());
-    }
-
-    @AfterClass
-    public static void tearDownPool() {
-        pool.shutdown();
-        pool = null;
-        System.out.println("ForkJoinPool shut down");
-    }
+    private static ForkJoinPool pool = new ForkJoinPool();
 
     private final static Fibonacci[] FIBONACCIS = {
             new FibonacciFormulaLong(),
@@ -58,10 +44,9 @@ public class FibonacciTest {
             new FibonacciRecursive(),
             new FibonacciRecursiveDijkstra(),
             new FibonacciRecursiveDijkstraKaratsuba(),
-//            new FibonacciRecursiveParallelDijkstraKaratsuba(pool),
-//            new FibonacciFormulaBigInteger(),
+            new FibonacciRecursiveParallelDijkstraKaratsuba(pool),
+            new FibonacciFormulaBigInteger(),
 //            new FibonacciTakahashi(),
-
     };
 
     @Test
@@ -267,12 +252,15 @@ public class FibonacciTest {
 
     @Test
     public void testParallelExecution() throws InterruptedException {
+        System.out.println("Creating F/J Pool with 128 threads");
         ForkJoinPool pool = new ForkJoinPool(128);
         Fibonacci fib = new FibonacciRecursiveParallelDijkstraKaratsuba(pool);
         long time = System.currentTimeMillis();
-        fib.calculate(2_000_000);
+        System.out.println("Trying to calculate fib(2000000)");
+        BigInteger value = fib.calculate(2_000_000);
+        assertEquals(1388483, value.bitLength());
         time = System.currentTimeMillis() - time;
-        System.out.println("Solved fib(10_000_000) in " + time + "ms parallel");
+        System.out.println("Solved fib(2_000_000) in " + time + "ms parallel");
         System.out.println(pool);
         assertEquals(128, pool.getParallelism());
         pool.shutdown();
