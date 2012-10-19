@@ -34,6 +34,8 @@ import java.util.concurrent.*;
  * thread A calls get(1000) and subsequently thread B calls get(1000), then
  * thread B will wait until thread A has put the value in the cache before
  * returning the value.  This prevents duplicate numbers being calculated.
+ * In order to avoid a deadlock, we only use the neighbouring numbers if they
+ * are ready, not if they are pending.
  *
  * @author Dr Heinz M. Kabutz, Joe Bowbeer
  */
@@ -45,27 +47,32 @@ final class FibonacciCache {
         FutureResult<BigInteger> result = new FutureResult<>();
         FutureResult<BigInteger> pending = cache.putIfAbsent(n, result);
         if (pending != null) {
-            System.out.println(Thread.currentThread() +
-                    " is waiting for result for n=" + n);
             return pending.get();
-        } else {
-            System.out.println(Thread.currentThread() +
-                    " is calculating result for n=" + n);
         }
         FutureResult<BigInteger> nMinusOne = cache.get(n - 1);
         FutureResult<BigInteger> nMinusTwo = cache.get(n - 2);
-        if (nMinusOne != null && nMinusTwo != null) {
-            return put(n, nMinusOne.get().add(nMinusTwo.get()));
+        if (isReady(nMinusOne) && isReady(nMinusTwo)) {
+            BigInteger value = nMinusOne.get().add(nMinusTwo.get());
+            put(n, value);
+            return value;
         }
         FutureResult<BigInteger> nPlusOne = cache.get(n + 1);
         FutureResult<BigInteger> nPlusTwo = cache.get(n + 2);
-        if (nPlusOne != null && nPlusTwo != null) {
-            return put(n, nPlusTwo.get().subtract(nPlusOne.get()));
+        if (isReady(nPlusOne) && isReady(nPlusTwo)) {
+            BigInteger value = nPlusTwo.get().subtract(nPlusOne.get());
+            put(n, value);
+            return value;
         }
-        if (nPlusOne != null && nMinusOne != null) {
-            return put(n, nPlusOne.get().subtract(nMinusOne.get()));
+        if (isReady(nPlusOne) && isReady(nMinusOne)) {
+            BigInteger value = nPlusOne.get().subtract(nMinusOne.get());
+            put(n, value);
+            return value;
         }
         return null;
+    }
+
+    private boolean isReady(FutureResult<BigInteger> result) {
+        return result != null && result.isReady();
     }
 
     public BigInteger put(int n, BigInteger value) {

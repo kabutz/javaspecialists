@@ -34,10 +34,7 @@ public class FutureResult<V> {
 
     public synchronized V get() throws InterruptedException {
         while (!ready) {
-            wait(100);
-            if (!ready) {
-                System.out.println("value not ready for thread: " + Thread.currentThread());
-            }
+            wait();
         }
         return value;
     }
@@ -46,5 +43,9 @@ public class FutureResult<V> {
         value = newValue;
         ready = true;
         notifyAll();
+    }
+
+    public synchronized boolean isReady() {
+        return ready;
     }
 }
