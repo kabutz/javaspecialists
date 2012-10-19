@@ -35,17 +35,17 @@ import static junit.framework.Assert.*;
  * @author Dr Heinz M. Kabutz
  */
 public class FibonacciTest {
-    private ForkJoinPool pool;
+    private static ForkJoinPool pool;
 
     @BeforeClass
-    public void setupPool() {
+    public static void setupPool() {
         System.out.println("ForkJoinPool created for " +
                 Runtime.getRuntime().availableProcessors() + " threads");
         pool = new ForkJoinPool(Runtime.getRuntime().availableProcessors());
     }
 
     @AfterClass
-    public void tearDownPool() {
+    public static void tearDownPool() {
         pool.shutdown();
         pool = null;
         System.out.println("ForkJoinPool shut down");
