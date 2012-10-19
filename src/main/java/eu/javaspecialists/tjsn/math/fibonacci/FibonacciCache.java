@@ -45,7 +45,12 @@ final class FibonacciCache {
         FutureResult<BigInteger> result = new FutureResult<>();
         FutureResult<BigInteger> pending = cache.putIfAbsent(n, result);
         if (pending != null) {
+            System.out.println(Thread.currentThread() +
+                    " is waiting for result for n=" + n);
             return pending.get();
+        } else {
+            System.out.println(Thread.currentThread() +
+                    " is calculating result for n=" + n);
         }
         FutureResult<BigInteger> nMinusOne = cache.get(n - 1);
         FutureResult<BigInteger> nMinusTwo = cache.get(n - 2);

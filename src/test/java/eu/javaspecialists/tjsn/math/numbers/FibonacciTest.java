@@ -35,7 +35,21 @@ import static junit.framework.Assert.*;
  * @author Dr Heinz M. Kabutz
  */
 public class FibonacciTest {
-    private final static ForkJoinPool pool = new ForkJoinPool();
+    private ForkJoinPool pool;
+
+    @BeforeClass
+    public void setupPool() {
+        System.out.println("ForkJoinPool created for " +
+                Runtime.getRuntime().availableProcessors() + " threads");
+        pool = new ForkJoinPool(Runtime.getRuntime().availableProcessors());
+    }
+
+    @AfterClass
+    public void tearDownPool() {
+        pool.shutdown();
+        pool = null;
+        System.out.println("ForkJoinPool shut down");
+    }
 
     private final static Fibonacci[] FIBONACCIS = {
             new FibonacciFormulaLong(),
