@@ -80,6 +80,7 @@ public class FibonacciRecursiveParallelDijkstraKaratsuba
                 if (result != null) {
                     return result;
                 }
+                System.out.println("Computing fib(" + n + ")");
 
                 if (n < SEQUENTIAL_THRESHOLD) {
                     result = sequential.calculate(n);
@@ -107,6 +108,7 @@ public class FibonacciRecursiveParallelDijkstraKaratsuba
                         result = karatsuba.multiply(bi1.add(bi1).add(bi0), bi0);
                     }
                 }
+                System.out.println("Adding result of fib(" + n + ") to cache");
                 cache.put(n, result);
                 return result;
             } catch (InterruptedException e) {
