@@ -22,6 +22,7 @@ import eu.javaspecialists.tjsn.math.fibonacci.*;
 import org.junit.*;
 
 import java.math.*;
+import java.util.*;
 import java.util.concurrent.*;
 
 import static junit.framework.Assert.*;
@@ -253,8 +254,15 @@ public class FibonacciTest {
     @Test
     public void testParallelExecution() throws InterruptedException {
         System.out.println("Creating F/J Pool with 128 threads");
-        ForkJoinPool pool = new ForkJoinPool(128);
+        final ForkJoinPool pool = new ForkJoinPool(128);
         Fibonacci fib = new FibonacciRecursiveParallelDijkstraKaratsuba(pool);
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                System.out.println("pool = " + pool);
+            }
+        }, 1000, 1000);
         long time = System.currentTimeMillis();
         System.out.println("Trying to calculate fib(2000000)");
         BigInteger value = fib.calculate(2_000_000);
@@ -263,6 +271,7 @@ public class FibonacciTest {
         System.out.println("Solved fib(2_000_000) in " + time + "ms parallel");
         System.out.println(pool);
         assertEquals(128, pool.getParallelism());
+        timer.cancel();
         pool.shutdown();
     }
 }
