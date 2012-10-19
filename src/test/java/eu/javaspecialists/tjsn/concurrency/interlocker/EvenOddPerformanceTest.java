@@ -49,38 +49,55 @@ public class EvenOddPerformanceTest {
         raceExecutors();
         raceExecutors();
         // real race
-        Map<Long, Class<? extends Interlocker>> results = raceExecutors();
+        List<InterlockerResult> results = raceExecutors();
 
-        for (Map.Entry<Long, Class<? extends Interlocker>> entry : results.entrySet()) {
-            System.out.println(entry.getValue().getSimpleName() + " in " + entry.getKey() + "ms");
+        for (InterlockerResult result : results) {
+            System.out.println(result.interlockerClass.getSimpleName() + " in " + result.time + "ms");
         }
 
         checkLockFreeAreFastest(results);
     }
 
-    private void checkLockFreeAreFastest(Map<Long, Class<? extends Interlocker>> results) {
-        Iterator<Class<? extends Interlocker>> it = results.values().iterator();
-        assertTrue(lockFree(it.next()));
-        assertTrue(lockFree(it.next()));
-        assertFalse(lockFree(it.next()));
-        assertFalse(lockFree(it.next()));
-        assertFalse(lockFree(it.next()));
-        assertFalse(it.hasNext());
-    }
-
-    private Map<Long, Class<? extends Interlocker>> raceExecutors() throws InterruptedException {
-        Map<Long, Class<? extends Interlocker>> results = new TreeMap<>();
+    private List<InterlockerResult> raceExecutors() throws InterruptedException {
+        List<InterlockerResult> results = new ArrayList<>(executors.length);
         for (Interlocker executor : executors) {
             InterlockTask<?> task = new EmptyInterlockTask(100 * 1000);
             long time = System.currentTimeMillis();
             executor.execute(task);
             time = System.currentTimeMillis() - time;
-            results.put(time, executor.getClass());
+            results.add(new InterlockerResult(executor, time));
         }
+        Collections.sort(results);
         return results;
     }
 
-    private boolean lockFree(Class<? extends Interlocker> interlockerClass) {
-        return interlockerClass == AtomicInterlocker.class || interlockerClass == LockFreeInterlocker.class;
+    private void checkLockFreeAreFastest(List<InterlockerResult> results) {
+        Iterator<InterlockerResult> it = results.iterator();
+        assertTrue(it.next().isLockFree());
+        assertTrue(it.next().isLockFree());
+        assertFalse(it.next().isLockFree());
+        assertFalse(it.next().isLockFree());
+        assertFalse(it.next().isLockFree());
+        assertFalse(it.hasNext());
+    }
+
+    private static class InterlockerResult implements Comparable<InterlockerResult> {
+        private final Class<? extends Interlocker> interlockerClass;
+        private final long time;
+
+        private InterlockerResult(Interlocker interlocker, long time) {
+            this.interlockerClass = interlocker.getClass();
+            this.time = time;
+        }
+
+        @Override
+        public int compareTo(InterlockerResult o) {
+            return Long.compare(time, o.time);
+        }
+
+        private boolean isLockFree() {
+            return interlockerClass == AtomicInterlocker.class ||
+                    interlockerClass == LockFreeInterlocker.class;
+        }
     }
 }
