@@ -44,14 +44,17 @@ final class FibonacciCache {
             new ConcurrentHashMap<>();
 
     public BigInteger get(int n) throws InterruptedException {
+        System.out.println("Thread " + Thread.currentThread() + " attempting to get(" + n + ") on FibonacciCache");
         FutureResult<BigInteger> result = new FutureResult<>();
         FutureResult<BigInteger> pending = cache.putIfAbsent(n, result);
         if (pending != null) {
+            System.out.println("Thread " + Thread.currentThread() + " waiting for pending get(" + n + ") on FibonacciCache");
             return pending.get();
         }
         FutureResult<BigInteger> nMinusOne = cache.get(n - 1);
         FutureResult<BigInteger> nMinusTwo = cache.get(n - 2);
         if (isReady(nMinusOne) && isReady(nMinusTwo)) {
+            System.out.println("Thread " + Thread.currentThread() + " adding two lower values");
             BigInteger value = nMinusOne.get().add(nMinusTwo.get());
             put(n, value);
             return value;
@@ -59,11 +62,13 @@ final class FibonacciCache {
         FutureResult<BigInteger> nPlusOne = cache.get(n + 1);
         FutureResult<BigInteger> nPlusTwo = cache.get(n + 2);
         if (isReady(nPlusOne) && isReady(nPlusTwo)) {
+            System.out.println("Thread " + Thread.currentThread() + " adding two higher values");
             BigInteger value = nPlusTwo.get().subtract(nPlusOne.get());
             put(n, value);
             return value;
         }
         if (isReady(nPlusOne) && isReady(nMinusOne)) {
+            System.out.println("Thread " + Thread.currentThread() + " adding two surrounding values");
             BigInteger value = nPlusOne.get().subtract(nMinusOne.get());
             put(n, value);
             return value;
