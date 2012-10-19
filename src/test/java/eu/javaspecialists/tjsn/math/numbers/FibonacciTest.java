@@ -44,8 +44,8 @@ public class FibonacciTest {
             new FibonacciRecursive(),
             new FibonacciRecursiveDijkstra(),
             new FibonacciRecursiveDijkstraKaratsuba(),
-            new FibonacciRecursiveParallelDijkstraKaratsuba(pool),
-            new FibonacciFormulaBigInteger(),
+//            new FibonacciRecursiveParallelDijkstraKaratsuba(pool),
+//            new FibonacciFormulaBigInteger(),
 //            new FibonacciTakahashi(),
     };
 
