@@ -43,10 +43,11 @@ public class FibonacciGeneratorExample {
                     1_000_000,
                     10_000_000,
                     100_000_000, // takes a bit long
-                    1000_000_000, // takes a bit long
+                    1_000_000_000, // takes a bit long
             };
         }
-        test(new FibonacciRecursiveParallelDijkstraKaratsuba(pool), ns);
+        test(new FibonacciRecursiveBowbeer(pool), ns);
+        //test(new FibonacciRecursiveParallelDijkstraKaratsuba(pool), ns);
     }
 
     private static void test(Fibonacci fib, int... ns) throws InterruptedException {

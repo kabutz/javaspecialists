@@ -46,8 +46,12 @@ import static eu.javaspecialists.tjsn.math.numbers.BigIntegerUtils.*;
  * <p/>
  * Algorithm also described in Introduction to Programming in Java, ISBN
  * 0321498054.
+ * <p/>
+ * The square function added by Joe Bowbeer optimizes the special case of
+ * squaring two numbers.
  *
  * @author Dr Heinz M. Kabutz
+ * @author Joe Bowbeer
  */
 public class BasicKaratsuba implements Karatsuba {
     public static final String THRESHOLD_PROPERTY_NAME =
@@ -78,4 +82,34 @@ public class BasicKaratsuba implements Karatsuba {
         // result = z2 * 2^2m + z1 * 2^m + z0
         return z2.shiftLeft(2 * m).add(z1.shiftLeft(m)).add(z0);
     }
+
+
+    /**
+     * Optimizes the square of large numbers using the Karatsuba algorithm.
+     *
+     * @author Joe Bowbeer
+     */
+    public BigInteger square(BigInteger x) {
+
+        int m = x.bitLength() / 2;
+        if (m <= THRESHOLD * 2) {
+            return x.pow(2);
+        }
+
+        // x = x1 * 2^m + x0
+        BigInteger[] xs = split(x, m);
+
+        // x^2 = (x1 * 2^m + x0)(x1 * 2^m + x0) = z2 * 2^2m + z1 * 2^m + z0
+        // where:
+        // z2 = x1 * x1
+        // z0 = x0 * x0
+        // z1 = x1 * x0 + x0 * x1 = (x1 + x0)(x1 + x0) - z2 - z0
+        BigInteger z2 = square(xs[0]);
+        BigInteger z0 = square(xs[1]);
+        BigInteger z1 = square(add(xs)).subtract(z2).subtract(z0);
+
+        // result = z2 * 2^2m + z1 * 2^m + z0
+        return z2.shiftLeft(2 * m).add(z1.shiftLeft(m)).add(z0);
+    }
+
 }

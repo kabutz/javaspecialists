@@ -111,4 +111,33 @@ public class KaratsubaTest {
         System.out.println("multiply_time = " + multiply_time);
         assertTrue(multiply_time > karatsuba_time);
     }
+
+    @Test
+    public void testKaratsubaSquare() throws InterruptedException {
+        for (int i = 0; i < 10; i++) {
+            test();
+        }
+    }
+
+    private void test() throws InterruptedException {
+        ForkJoinPool pool = new ForkJoinPool();
+        BigInteger a = new BigInteger(1_000_000, ThreadLocalRandom.current());
+        BigInteger squareOfA = a.pow(2);
+        checkKaratsubaSquare(a, squareOfA, new BasicKaratsuba());
+        checkKaratsubaSquare(a, squareOfA, new ParallelKaratsuba(pool));
+        pool.shutdown();
+        assertTrue(pool.awaitTermination(1, TimeUnit.SECONDS));
+        System.out.println("pool = " + pool);
+    }
+
+    private void checkKaratsubaSquare(BigInteger a, BigInteger squareOfA, Karatsuba karatsuba) {
+        long time = System.currentTimeMillis();
+        assertEquals(squareOfA, karatsuba.square(a));
+        time = System.currentTimeMillis() - time;
+        System.out.println("Time for " + karatsuba.getClass().getSimpleName() + " square: " + time);
+        time = System.currentTimeMillis();
+        assertEquals(squareOfA, karatsuba.multiply(a, a));
+        time = System.currentTimeMillis() - time;
+        System.out.println("Time for " + karatsuba.getClass().getSimpleName() + " multiply: " + time);
+    }
 }

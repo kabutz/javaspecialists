@@ -30,4 +30,6 @@ import java.math.*;
  */
 public interface Karatsuba {
     BigInteger multiply(BigInteger x, BigInteger y);
+
+    BigInteger square(BigInteger x);
 }
