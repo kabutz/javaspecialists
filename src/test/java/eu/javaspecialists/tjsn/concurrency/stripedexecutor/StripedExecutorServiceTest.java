@@ -231,7 +231,8 @@ public class StripedExecutorServiceTest {
 
         public void run() {
             try {
-                Thread.sleep((long) (10 + Math.random() * 10));
+                ThreadLocalRandom rand = ThreadLocalRandom.current();
+                Thread.sleep(rand.nextInt(10) + 10);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
@@ -285,7 +286,8 @@ public class StripedExecutorServiceTest {
 
         public Integer call() throws Exception {
             try {
-                Thread.sleep((long) (10 + Math.random() * 10));
+                ThreadLocalRandom rand = ThreadLocalRandom.current();
+                Thread.sleep(rand.nextInt(10) + 10);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
@@ -305,7 +307,8 @@ public class StripedExecutorServiceTest {
 
         public void run() {
             try {
-                Thread.sleep((long) (10 + Math.random() * 10));
+                ThreadLocalRandom rand = ThreadLocalRandom.current();
+                Thread.sleep(rand.nextInt(10) + 10);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }

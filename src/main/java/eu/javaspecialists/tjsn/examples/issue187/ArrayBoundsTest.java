@@ -52,7 +52,7 @@ public class ArrayBoundsTest extends DuplicateExceptionChecker {
         Random random = new Random(0);
         for (int i = 0; i < randomObjects.length; i++) {
             randomObjects[i] = new Integer(i);
-            randomIndexes[i] = (int) (Math.random() * i);
+            randomIndexes[i] = random.nextInt(i);
             if (random.nextDouble() < probabilityIndexIsOut) {
                 randomIndexes[i] = -randomIndexes[i];
             }

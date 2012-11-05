@@ -21,6 +21,8 @@ package eu.javaspecialists.tjsn.concurrency.interlocker;
 import eu.javaspecialists.tjsn.concurrency.interlocker.impl.*;
 import org.junit.*;
 
+import java.util.concurrent.*;
+
 import static org.junit.Assert.*;
 
 /**
@@ -74,8 +76,9 @@ public class EvenOddCorrectnessTest {
 
     @Test
     public void testForRaceConditionsWithSleep() throws InterruptedException {
+        ThreadLocalRandom rand = ThreadLocalRandom.current();
         for (int i = 0; i < 4; i++) {
-            int upto = (int) (Math.random() * 10) + 40;
+            int upto = rand.nextInt(10) + 40;
             for (Interlocker executor : executors) {
                 check(upto, executor, new RaceConditionTestingStrategy(upto));
             }

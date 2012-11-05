@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AntConfiguration">
+    <defaultAnt bundledAnt="true" />
+  </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions />
@@ -193,6 +196,7 @@
         <option name="NAMES_COUNT_TO_USE_IMPORT_ON_DEMAND" value="1" />
         <option name="RIGHT_MARGIN" value="80" />
         <option name="JD_PRESERVE_LINE_FEEDS" value="true" />
+        <option name="LINE_COMMENT_AT_FIRST_COLUMN" value="false" />
         <option name="WRAP_COMMENTS" value="true" />
         <XML>
           <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
@@ -200,6 +204,11 @@
         <ADDITIONAL_INDENT_OPTIONS fileType="haml">
           <option name="INDENT_SIZE" value="2" />
         </ADDITIONAL_INDENT_OPTIONS>
+        <codeStyleSettings language="Groovy">
+          <option name="LINE_COMMENT_AT_FIRST_COLUMN" value="false" />
+          <option name="WRAP_COMMENTS" value="true" />
+          <option name="PARENT_SETTINGS_INSTALLED" value="true" />
+        </codeStyleSettings>
         <codeStyleSettings language="JAVA">
           <indentOptions>
             <option name="TAB_SIZE" value="8" />

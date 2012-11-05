@@ -1,68 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c447008-9653-4c89-b48a-29e2b5e8cf7c" name="Default" comment="Added test to check that the parallel fibonacci solution really does parallelize the work.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NOTICE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue203/GoToJava.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciTakahashi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaspecialists.iml" afterPath="$PROJECT_DIR$/javaspecialists.iml" />
+    <list id="5c447008-9653-4c89-b48a-29e2b5e8cf7c" name="Default" comment="Added test to check that the parallel fibonacci solution really does parallelize the work." />
+    <list default="true" id="ecd1422d-0b60-43c5-b99b-60eb800de7cc" name="New changelist" comment="New changelist">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaspecialists.ipr" afterPath="$PROJECT_DIR$/javaspecialists.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaspecialists.iws" afterPath="$PROJECT_DIR$/javaspecialists.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/InterlockTask.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/InterlockTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/Interlocker.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/Interlocker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/Interlockers.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/Interlockers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/impl/AtomicInterlocker.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/impl/AtomicInterlocker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/impl/ConditionInterlocker.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/impl/ConditionInterlocker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/impl/LockFreeInterlocker.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/impl/LockFreeInterlocker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/impl/SemaphoreInterlocker.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/impl/SemaphoreInterlocker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/impl/WaitNotifyInterlocker.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/impl/WaitNotifyInterlocker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedCallable.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedCallable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedExecutorService.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedExecutorService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedObject.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedRunnable.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedRunnable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/ArrayBoundsTest.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/ArrayBoundsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/ClassCastTest.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/ClassCastTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/DuplicateExceptionChecker.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/DuplicateExceptionChecker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/MixedExeptionTest.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/MixedExeptionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/NullPointerTest.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/NullPointerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue188/VirtualMachineLiveLock.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue188/VirtualMachineLiveLock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue198/Blinker.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue198/Blinker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue198/CloseToOne.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue198/CloseToOne.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue198/CloseToOne2.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue198/CloseToOne2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue198/FindRandom.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue198/FindRandom.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue198/MathTeaser.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue198/MathTeaser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue201/FibonacciGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue201/FibonacciGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue201/FibonacciGeneratorExample.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue201/FibonacciGeneratorExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/Fibonacci.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/Fibonacci.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciCache.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciFormulaBigInteger.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciFormulaBigInteger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciFormulaLong.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciFormulaLong.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciIterative.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciIterative.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursive.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveDijkstra.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveDijkstra.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveDijkstraKaratsuba.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveDijkstraKaratsuba.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveNonCaching.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveNonCaching.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveParallelDijkstraKaratsuba.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveParallelDijkstraKaratsuba.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/NonCachingFibonacci.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/NonCachingFibonacci.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/BasicKaratsuba.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/BasicKaratsuba.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/BigIntegerUtils.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/BigIntegerUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/Karatsuba.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/Karatsuba.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/ParallelKaratsuba.java" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/ParallelKaratsuba.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/EmptyInterlockTask.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/EmptyInterlockTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/EvenOddCorrectnessTest.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/EvenOddCorrectnessTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/EvenOddPerformanceTest.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/EvenOddPerformanceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/InterleavedNumberTestingStrategy.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/InterleavedNumberTestingStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/RaceConditionTestingStrategy.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/RaceConditionTestingStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/ThreadPrintingTask.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/ThreadPrintingTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/VerifyResult.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/VerifyResult.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedExecutorServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedExecutorServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/examples/issue198/CloseToOne2Test.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/examples/issue198/CloseToOne2Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/examples/issue198/CloseToOneTest.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/examples/issue198/CloseToOneTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/examples/issue198/FindRandomTest.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/examples/issue198/FindRandomTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/math/numbers/FibonacciTest.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/math/numbers/FibonacciTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/math/numbers/KaratsubaTest.java" afterPath="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/math/numbers/KaratsubaTest.java" />
     </list>
     <ignored path="javaspecialists.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,6 +28,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/javaspecialists$EvenOddPerformanceTest.ic" NAME="EvenOddPerformanceTest Coverage Results" MODIFIED="1337279625629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>eu.javaspecialists.tjsn.concurrency.interlocker.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/javaspecialists$FibonacciTest.coverage" NAME="FibonacciTest Coverage Results" MODIFIED="1350657951205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>eu.javaspecialists.tjsn.math.numbers.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/javaspecialists$eu_javaspecialists_tjsn_in_javaspecialists.ic" NAME="eu.javaspecialists.tjsn in javaspecialists Coverage Results" MODIFIED="1337280012295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>eu.javaspecialists.tjsn.*</FILTER>
@@ -172,17 +121,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Interlocker.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/Interlocker.java">
+      <file leaf-file-name="StripedExecutorService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedExecutorService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="22" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
+            <state line="40" column="13" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Interlockers.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/Interlockers.java">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -190,73 +139,73 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InterlockTask.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/InterlockTask.java">
+      <file leaf-file-name="EvenOddCorrectnessTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/EvenOddCorrectnessTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="17" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0">
+            <state line="81" column="0" selection-start="2806" selection-end="2806" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CloseToOne2Test.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/examples/issue198/CloseToOne2Test.java">
+      <file leaf-file-name="StripedExecutorServiceTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedExecutorServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="13" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0">
+            <state line="311" column="0" selection-start="10767" selection-end="10767" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="ArrayBoundsTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/ArrayBoundsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="53" column="31" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="javaspecialists.iws" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javaspecialists.iws">
+      <file leaf-file-name="MixedExeptionTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/MixedExeptionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="86" column="37" selection-start="2898" selection-end="2898" vertical-scroll-proportion="0.40336135">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FibonacciRecursiveDijkstra.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveDijkstra.java">
+      <file leaf-file-name="FutureResult.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/util/FutureResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="13" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0">
+            <state line="29" column="13" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FibonacciTakahashi.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciTakahashi.java">
+      <file leaf-file-name="FibonacciRecursiveDijkstraKaratsuba.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveDijkstraKaratsuba.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0">
+            <state line="34" column="13" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FibonacciTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/math/numbers/FibonacciTest.java">
+      <file leaf-file-name="FibonacciRecursiveParallelDijkstraKaratsuba.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveParallelDijkstraKaratsuba.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="16" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.0">
+            <state line="45" column="13" selection-start="1808" selection-end="1808" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoToJava.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue203/GoToJava.java">
+      <file leaf-file-name="Fibonacci.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/Fibonacci.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="12" selection-start="965" selection-end="965" vertical-scroll-proportion="0.30466473">
+            <state line="27" column="22" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -275,22 +224,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveParallelDijkstraKaratsubaReservingCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciCacheTemp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/util/FutureResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveParallelDijkstraKaratsuba.java" />
+        <option value="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/EvenOddPerformanceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/Karatsuba.java" />
         <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/ParallelKaratsuba.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/NonCachingFibonacci.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciIterative.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue201/FibonacciGeneratorExample.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciCache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/BigIntegerUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/BasicKaratsuba.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/Fibonacci.java" />
-        <option value="$PROJECT_DIR$/LICENSE" />
-        <option value="$PROJECT_DIR$/NOTICE" />
+        <option value="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/math/numbers/KaratsubaTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveBowbeer.java" />
         <option value="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/math/numbers/FibonacciTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciTakahashi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue203/GoToJava.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue201/FibonacciGeneratorExample.java" />
+        <option value="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/EvenOddCorrectnessTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedExecutorServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/ArrayBoundsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/MixedExeptionTest.java" />
       </list>
     </option>
   </component>
@@ -324,7 +273,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1436" />
-    <option name="height" value="878" />
+    <option name="height" value="778" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -337,16 +286,37 @@
             <id>Android</id>
           </State>
           <State>
+            <id>Code maturity issues</id>
+          </State>
+          <State>
             <id>CorrectnessLintAndroid</id>
           </State>
           <State>
+            <id>Declaration redundancy</id>
+          </State>
+          <State>
             <id>Error handling</id>
+          </State>
+          <State>
+            <id>Error handlingJavaScript</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>Inheritance issues</id>
           </State>
           <State>
             <id>Java language level issues</id>
           </State>
           <State>
             <id>Java language level migration aids</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Javadoc issues</id>
           </State>
           <State>
             <id>LintAndroid</id>
@@ -359,6 +329,9 @@
           </State>
           <State>
             <id>Resource management issues</id>
+          </State>
+          <State>
+            <id>Spelling</id>
           </State>
         </expanded-state>
         <selected-state>
@@ -395,12 +368,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaspecialists" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -412,90 +385,6 @@
               <option name="myItemId" value="javaspecialists" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaspecialists" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaspecialists" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaspecialists" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaspecialists" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -532,8 +421,38 @@
               <option name="myItemId" value="tjsn" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="numbers" />
+              <option name="myItemId" value="javaspecialists" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaspecialists" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tjsn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="concurrency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripedexecutor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -560,6 +479,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tjsn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="concurrency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interlocker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -618,8 +545,38 @@
               <option name="myItemId" value="examples" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="issue203" />
+              <option name="myItemId" value="javaspecialists" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaspecialists" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tjsn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="issue187" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -649,18 +606,86 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
+              <option name="myItemId" value="concurrency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaspecialists" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaspecialists" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tjsn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="concurrency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripedexecutor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaspecialists" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaspecialists" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tjsn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="concurrency" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaspecialists" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -670,13 +695,13 @@
   <component name="PropertiesComponent">
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="copyright" />
+    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -690,6 +715,7 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="eu.javaspecialists.tjsn.math.fibonacci" />
+      <recent name="eu.javaspecialists.tjsn.examples.issue203" />
       <recent name="eu.javaspecialists.tjsn.examples.issue201" />
       <recent name="eu.javaspecialists.tjsn.math.numbers" />
       <recent name="eu.javaspecialists.tjsn.concurrency.interlocker" />
@@ -705,6 +731,7 @@
       <recent name="eu.javaspecialists.tjsn.math.numbers.BasicKaratsuba" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="eu.javaspecialists.tjsn.concurrency.util" />
       <recent name="eu.javaspecialists.tjsn.math.fibonacci" />
       <recent name="eu.javaspecialists.tjsn.math.numbers" />
     </key>
@@ -716,7 +743,7 @@
       <recent name="eu.javaspecialists.tjsn.examples.issue187" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FibonacciTest">
+  <component name="RunManager" selected="JUnit.eu.javaspecialists.tjsn in javaspecialists">
     <configuration default="false" name="FibonacciTest.testParallelExecution" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
@@ -745,51 +772,41 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="FibonacciGenerator" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="FibonacciTest.testManyParallelExecutions" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
-          <option name="PATTERN" value="eu.javaspecialists.tjsn.examples.issue201.*" />
+          <option name="PATTERN" value="eu.javaspecialists.tjsn.math.numbers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.examples.issue201.FibonacciGenerator" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <module name="javaspecialists" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="PACKAGE_NAME" value="eu.javaspecialists.tjsn.math.numbers" />
+      <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.math.numbers.FibonacciTest" />
+      <option name="METHOD_NAME" value="testManyParallelExecutions" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="javaspecialists" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
       <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="FibonacciGeneratorExample" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="eu.javaspecialists.tjsn.examples.issue201.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.examples.issue201.FibonacciGeneratorExample" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="javaspecialists" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="KaratsubaTest" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="KaratsubaTest.testKaratsubaSquare" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="eu.javaspecialists.tjsn.math.numbers.*" />
@@ -801,8 +818,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="eu.javaspecialists.tjsn.math.numbers" />
       <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.math.numbers.KaratsubaTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testKaratsubaSquare" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -831,6 +848,34 @@
       <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.math.numbers.FibonacciTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="eu.javaspecialists.tjsn in javaspecialists" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="eu.javaspecialists.tjsn.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="javaspecialists" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="eu.javaspecialists.tjsn" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -890,6 +935,7 @@
         </option>
       </MavenSettings>
       <method>
+        <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
@@ -977,10 +1023,10 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.FibonacciTest.testParallelExecution" />
-      <item index="1" class="java.lang.String" itemvalue="Application.FibonacciGenerator" />
-      <item index="2" class="java.lang.String" itemvalue="Application.FibonacciGeneratorExample" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.KaratsubaTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.FibonacciTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.FibonacciTest.testManyParallelExecutions" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.KaratsubaTest.testKaratsubaSquare" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.FibonacciTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.eu.javaspecialists.tjsn in javaspecialists" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1003,14 +1049,16 @@
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
     <configuration useDefault="true">$USER_HOME$/.subversion_IDEA</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5c447008-9653-4c89-b48a-29e2b5e8cf7c" name="Default" comment="" />
+      <changelist id="ecd1422d-0b60-43c5-b99b-60eb800de7cc" name="New changelist" comment="" />
       <created>1337166845598</created>
-      <updated>1337166845598</updated>
+      <updated>1339596628753</updated>
     </task>
     <task id="LOCAL-00001" summary="new maven project&#10;">
       <created>1337166984152</created>
@@ -1108,7 +1156,87 @@
       <created>1337892575779</created>
       <updated>1337892575779</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Published under Apache 2.0 license">
+      <created>1339596597887</created>
+      <updated>1339596597887</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Updated comments">
+      <created>1339602673114</created>
+      <updated>1339602673114</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Added examples from newsletter #203">
+      <created>1339602710505</created>
+      <updated>1339602710505</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Removed Takahashi from test as it does not cancel fast enough.">
+      <created>1339602868700</created>
+      <updated>1339602868700</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Added the FutureResult, based on Doug Lea's class and modified FibonacciCache according to Joe Bowbeer's suggestions">
+      <created>1350641005430</created>
+      <updated>1350641005430</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Some tests commented out to make build pass.">
+      <created>1350644488922</created>
+      <updated>1350644488922</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Touched file to trigger Jenkins automatic refresh.">
+      <created>1350644948370</created>
+      <updated>1350644948370</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Additional test code to test dependencies between results in the FibonacciCache">
+      <created>1350649011042</created>
+      <updated>1350649011042</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Changed setup and teardown methods to be static for test class">
+      <created>1350649263100</created>
+      <updated>1350649263100</updated>
+    </task>
+    <task id="LOCAL-00035" summary="debug info for FutureResult">
+      <created>1350650194827</created>
+      <updated>1350650194827</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Added timeout to wait of 100ms">
+      <created>1350650326482</created>
+      <updated>1350650326482</updated>
+    </task>
+    <task id="LOCAL-00037" summary="conditional output if we have to wait and value is not ready">
+      <created>1350650379764</created>
+      <updated>1350650379764</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Removed deadlock from new FibonacciCache">
+      <created>1350657593933</created>
+      <updated>1350657593933</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Added back the parallel tests">
+      <created>1350658123416</created>
+      <updated>1350658123416</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Added timer to print out f/j pool in parallel test">
+      <created>1350658804688</created>
+      <updated>1350658804688</updated>
+    </task>
+    <task id="LOCAL-00041" summary="New changelist">
+      <created>1350660056363</created>
+      <updated>1350660056363</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Added logging to recursive parallel">
+      <created>1350661364522</created>
+      <updated>1350661364522</updated>
+    </task>
+    <task id="LOCAL-00043" summary="commented out logging code in FibonacciTask">
+      <created>1350664344922</created>
+      <updated>1350664344922</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Fixed EvenOddPerformanceTest that sometimes overwrote lock free results.">
+      <created>1350675348760</created>
+      <updated>1350675348760</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Added new implementation of FibonacciSolver by Joe Bowbeer">
+      <created>1350967872340</created>
+      <updated>1350967872340</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1132,33 +1260,36 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1436" height="878" extended-state="0" />
+    <frame x="0" y="22" width="1436" height="778" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944405" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39945093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41248098" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42896363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875773" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875773" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944405" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1503597" sideWeight="0.5059445" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15251799" sideWeight="0.5072655" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33021584" sideWeight="0.5059445" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49360615" sideWeight="0.9621514" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19496402" sideWeight="0.58751905" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5129376" sideWeight="0.9621514" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4138641" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875773" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3409091" sideWeight="0.43582705" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1197,7 +1328,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added check for n &lt; 0." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new implementation of FibonacciSolver by Joe Bowbeer" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1210,91 +1341,43 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="new maven project&#10;" />
-    <MESSAGE value="StripedExecutorService allows tasks to be executed in a specific order." />
-    <MESSAGE value="Added sample files from newsletter #198 - showing how we can calculate the highest random number" />
-    <MESSAGE value="Added interlocker files from newsletter 188, including a sample that shows how the JVM can livelock." />
-    <MESSAGE value="Added javadocs." />
-    <MESSAGE value="Extremely dangerous class that can livelock a JVM since JDK 1.6.0_14 up to 1.7.0_u4 at least." />
-    <MESSAGE value="Made the class testable" />
-    <MESSAGE value="Added JavaDocs" />
-    <MESSAGE value="Added sample files from newsletter #187 - demonstrating how exceptions are reused in the JVM if they happen frequently." />
-    <MESSAGE value="Turned off DEBUG, so finalizers will not be called anymore" />
-    <MESSAGE value="Added JavaDocs, noting a brief description of the class and the author." />
-    <MESSAGE value="Karatsuba multiplication algorithms for BigInteger, also using fork/join for ParallelKaratsuba." />
-    <MESSAGE value="Various Fibonacci calculators.  The fastest, the recursive parallel dijkstra karatsuba, can solve Fibonacci one billion in about 20 hours on an 8 core machine in Java." />
-    <MESSAGE value="Added test to check that the parallel fibonacci solution really does parallelize the work." />
-    <MESSAGE value="Added system properties for controlling the threshold when plain BigInteger.multiply() is used.  This can be used as a tuning parameter." />
-    <MESSAGE value="Changed exception text to use the MAXIMUM_PRECISE_NUMBER field value." />
-    <MESSAGE value="Added threshold tuning parameter to parallel fibonacci solution." />
     <MESSAGE value="Changed FibonacciCache to add cache reservation scheme to avoid calculating the same value twice in a parallel algorithm." />
     <MESSAGE value="Changed special multiply character in comments to the default * as it was causing problems compiling on some systems." />
     <MESSAGE value="Changed special minus character to normal &quot;-&quot;." />
     <MESSAGE value="Removed reset() from cache.  If you want to clear it, just release the handle to your Fibonacci instance." />
     <MESSAGE value="Added check for n &lt; 0." />
+    <MESSAGE value="Published under Apache 2.0 license" />
+    <MESSAGE value="Updated comments" />
+    <MESSAGE value="Added examples from newsletter #203" />
+    <MESSAGE value="Removed Takahashi from test as it does not cancel fast enough." />
+    <MESSAGE value="Added the FutureResult, based on Doug Lea's class and modified FibonacciCache according to Joe Bowbeer's suggestions" />
+    <MESSAGE value="Some tests commented out to make build pass." />
+    <MESSAGE value="Touched file to trigger Jenkins automatic refresh." />
+    <MESSAGE value="Additional test code to test dependencies between results in the FibonacciCache" />
+    <MESSAGE value="Changed setup and teardown methods to be static for test class" />
+    <MESSAGE value="debug info for FutureResult" />
+    <MESSAGE value="Added timeout to wait of 100ms" />
+    <MESSAGE value="conditional output if we have to wait and value is not ready" />
+    <MESSAGE value="Removed deadlock from new FibonacciCache" />
+    <MESSAGE value="Added back the parallel tests" />
+    <MESSAGE value="Added timer to print out f/j pool in parallel test" />
+    <MESSAGE value="New changelist" />
+    <MESSAGE value="Added logging to recursive parallel" />
+    <MESSAGE value="commented out logging code in FibonacciTask" />
+    <MESSAGE value="Fixed EvenOddPerformanceTest that sometimes overwrote lock free results." />
+    <MESSAGE value="Added new implementation of FibonacciSolver by Joe Bowbeer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/Fibonacci.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/math/numbers/KaratsubaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="22" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="30" selection-start="10173" selection-end="10173" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NOTICE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="666" selection-end="666" vertical-scroll-proportion="0.39041096" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/BasicKaratsuba.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="13" selection-start="1849" selection-end="1849" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/numbers/BigIntegerUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/Interlocker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="22" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/Interlockers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/interlocker/InterlockTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="17" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/examples/issue198/CloseToOne2Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="13" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javaspecialists.iws">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="117" column="19" selection-start="4488" selection-end="4488" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveDijkstra.java">
@@ -1302,21 +1385,94 @@
         <state line="28" column="13" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciTakahashi.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue201/FibonacciGeneratorExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/math/numbers/FibonacciTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="16" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.0">
+        <state line="33" column="45" selection-start="1203" selection-end="1203" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue203/GoToJava.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedCallable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="12" selection-start="965" selection-end="965" vertical-scroll-proportion="0.30466473">
+        <state line="27" column="17" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="17" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="14" selection-start="760" selection-end="811" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/util/FutureResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="13" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveDijkstraKaratsuba.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="13" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/FibonacciRecursiveParallelDijkstraKaratsuba.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="13" selection-start="1808" selection-end="1808" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/math/fibonacci/Fibonacci.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="22" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="13" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/interlocker/EvenOddCorrectnessTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="0" selection-start="2806" selection-end="2806" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor/StripedExecutorServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="311" column="0" selection-start="10767" selection-end="10767" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/ArrayBoundsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="31" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187/MixedExeptionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="37" selection-start="2898" selection-end="2898" vertical-scroll-proportion="0.40336135">
           <folding />
         </state>
       </provider>
@@ -1391,7 +1547,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
