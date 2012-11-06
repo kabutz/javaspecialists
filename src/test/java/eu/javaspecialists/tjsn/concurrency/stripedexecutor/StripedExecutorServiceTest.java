@@ -39,9 +39,7 @@ public class StripedExecutorServiceTest {
 
     @Test
     public void testSingleStripeRunnable() throws InterruptedException {
-        ExecutorService pool = new StripedExecutorService(
-                Executors.newCachedThreadPool());
-
+        ExecutorService pool = new StripedExecutorService();
         Object stripe = new Object();
         AtomicInteger actual = new AtomicInteger(0);
         for (int i = 0; i < 100; i++) {
@@ -61,9 +59,7 @@ public class StripedExecutorServiceTest {
         ThreadGroup group = new ThreadGroup("stripetestgroup");
         Thread starter = new Thread(group, "starter") {
             public void run() {
-                ExecutorService pool = new StripedExecutorService(
-                        Executors.newCachedThreadPool());
-
+                ExecutorService pool = new StripedExecutorService();
                 Object stripe = new Object();
                 AtomicInteger actual = new AtomicInteger(0);
                 for (int i = 0; i < 100; i++) {
@@ -85,18 +81,19 @@ public class StripedExecutorServiceTest {
 
     @Test
     public void testShutdownNow() throws InterruptedException {
-        ExecutorService pool = new StripedExecutorService(
-                Executors.newCachedThreadPool());
-
+        ExecutorService pool = new StripedExecutorService();
         Object stripe = new Object();
         AtomicInteger actual = new AtomicInteger(0);
         for (int i = 0; i < 100; i++) {
             pool.submit(new TestRunnable(stripe, actual, i));
         }
         Thread.sleep(500);
+        assertFalse(pool.isTerminated());
         Collection<Runnable> unfinishedJobs = pool.shutdownNow();
 
+        assertTrue(pool.isShutdown());
         assertTrue(pool.awaitTermination(1, TimeUnit.MINUTES));
+        assertTrue(pool.isTerminated());
 
         assertTrue(unfinishedJobs.size() > 0);
 
@@ -105,9 +102,7 @@ public class StripedExecutorServiceTest {
 
     @Test
     public void testSingleStripeCallableWithCompletionService() throws InterruptedException, ExecutionException {
-        ExecutorService pool = new StripedExecutorService(
-                Executors.newCachedThreadPool());
-
+        ExecutorService pool = new StripedExecutorService();
         final CompletionService<Integer> cs = new ExecutorCompletionService<>(
                 pool
         );
@@ -142,10 +137,7 @@ public class StripedExecutorServiceTest {
 
     @Test
     public void testUnstripedRunnable() throws InterruptedException {
-        ExecutorService pool = new StripedExecutorService(
-                Executors.newCachedThreadPool());
-
-
+        ExecutorService pool = new StripedExecutorService();
         AtomicInteger actual = new AtomicInteger(0);
         for (int i = 0; i < 100; i++) {
             pool.submit(new TestUnstripedRunnable(actual, i));
@@ -159,9 +151,7 @@ public class StripedExecutorServiceTest {
 
     @Test
     public void testMultipleStripes() throws InterruptedException {
-        final ExecutorService pool = new StripedExecutorService(
-                Executors.newCachedThreadPool());
-
+        final ExecutorService pool = new StripedExecutorService();
         ExecutorService producerPool = Executors.newCachedThreadPool();
         for (int i = 0; i < 20; i++) {
             producerPool.submit(new Runnable() {
@@ -187,9 +177,7 @@ public class StripedExecutorServiceTest {
 
     @Test
     public void testMultipleFastStripes() throws InterruptedException {
-        final ExecutorService pool = new StripedExecutorService(
-                Executors.newCachedThreadPool());
-
+        final ExecutorService pool = new StripedExecutorService();
         ExecutorService producerPool = Executors.newCachedThreadPool();
         for (int i = 0; i < 20; i++) {
             producerPool.submit(new Runnable() {
@@ -319,4 +307,6 @@ public class StripedExecutorServiceTest {
             System.out.println("Execute unstriped " + actual + ", " + expected);
         }
     }
+
+
 }
