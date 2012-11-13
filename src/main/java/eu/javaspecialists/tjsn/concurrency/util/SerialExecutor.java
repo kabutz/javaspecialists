@@ -22,46 +22,39 @@ import java.util.*;
 import java.util.concurrent.*;
 
 /**
- * This executor invokes the submitted tasks in sequence.  Whenever a job is
- * added with execute(), it is either executed immediately if no other jobs are
- * busy, or otherwise enqueue.
- * a wrapper Runnable is added to
- * the list of tasks.
- * This wrapper
- * it
- * is first put into the queue of tasks.
+ * This executor invokes the submitted tasks in sequence.
  *
  * @author Doug Lea
  * @see java.util.concurrent.Executor
  */
 public class SerialExecutor implements Executor {
-    private final Queue<Runnable> tasks = new ArrayDeque<>();
-    private final Executor executor;
-    private Runnable active;
+  private final Queue<Runnable> tasks = new ArrayDeque<>();
+  private final Executor executor;
+  private Runnable active;
 
-    public SerialExecutor(Executor executor) {
-        this.executor = executor;
-    }
+  public SerialExecutor(Executor executor) {
+    this.executor = executor;
+  }
 
-    public synchronized void execute(final Runnable r) {
-        tasks.offer(new Runnable() {
-            public void run() {
-                try {
-                    r.run();
-                } finally {
-                    synchronized (SerialExecutor.this) {
-                        if ((active = tasks.poll()) != null) {
-                            executor.execute(active);
-                        }
-                    }
-                }
-            }
-        });
-        if (active == null) {
-            if ((active = tasks.poll()) != null) {
-                executor.execute(active);
-            }
+  public synchronized void execute(final Runnable r) {
+    // add() should be used instead of offer()
+    tasks.add(new Runnable() {
+      public void run() {
+        try {
+          r.run();
+        } finally {
+          scheduleNext();
         }
+      }
+    });
+    if (active == null) {
+      scheduleNext();
     }
+  }
 
+  protected synchronized void scheduleNext() {
+    if ((active = tasks.poll()) != null) {
+      executor.execute(active);
+    }
+  }
 }
