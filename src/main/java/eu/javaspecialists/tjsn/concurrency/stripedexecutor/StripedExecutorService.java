@@ -376,6 +376,22 @@ public class StripedExecutorService extends AbstractExecutorService {
     }
 
     /**
+     * Prints information about current state of this executor, the
+     * wrapped executor and the serial executors.
+     */
+    public String toString() {
+        lock.lock();
+        try {
+            return "StripedExecutorService: state=" + state + ", " +
+                    "executor=" + executor + ", " +
+                    "serialExecutors=" + executors;
+        } finally {
+            lock.unlock();
+        }
+
+    }
+
+    /**
      * This field is used for conditional compilation.  If it is
      * false, then the finalize method is an empty method, in
      * which case the SerialExecutor will not be registered with
@@ -485,6 +501,12 @@ public class StripedExecutorService extends AbstractExecutorService {
             } finally {
                 lock.unlock();
             }
+        }
+
+        public String toString() {
+            assert lock.isHeldByCurrentThread();
+            return "SerialExecutor: active=" + active + ", " +
+                    "tasks=" + tasks;
         }
     }
 }
