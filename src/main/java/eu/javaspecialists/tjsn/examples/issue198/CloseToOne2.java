@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -24,12 +24,12 @@ package eu.javaspecialists.tjsn.examples.issue198;
  * @author Dr Heinz M. Kabutz
  */
 public class CloseToOne2 {
-    public static void main(String[] args) {
-        double d = 0.999999993;
-        System.out.println("d = " + d);
-        int i = (int) (1 + d);
-        System.out.println("i = " + i);
-        int j = (int) (100_000_000 + d);
-        System.out.println("j = " + j);
-    }
+  public static void main(String[] args) {
+    double d = 0.999999993;
+    System.out.println("d = " + d);
+    int i = (int) (1 + d);
+    System.out.println("i = " + i);
+    int j = (int) (100_000_000 + d);
+    System.out.println("j = " + j);
+  }
 }

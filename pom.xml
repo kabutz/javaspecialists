@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright (C) 2000-2012 Heinz Max Kabutz
+  ~ Copyright (C) 2000-2013 Heinz Max Kabutz
   ~
   ~ See the NOTICE file distributed with this work for additional
   ~ information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -20,30 +20,48 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>javaspecialists</groupId>
-    <artifactId>javaspecialists</artifactId>
-    <version>0.1</version>
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.9</version>
-        </dependency>
-    </dependencies>
+  <groupId>javaspecialists</groupId>
+  <artifactId>javaspecialists</artifactId>
+  <version>0.1</version>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.9</version>
+    </dependency>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <dependency>
+      <groupId>high-scale-lib</groupId>
+      <artifactId>high-scale-lib</artifactId>
+      <version>1.1.2</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/high-scale-lib.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>jsr166e</groupId>
+      <artifactId>jsr166e</artifactId>
+      <version>0.1</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/jsr166e.jar</systemPath>
+    </dependency>
+
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

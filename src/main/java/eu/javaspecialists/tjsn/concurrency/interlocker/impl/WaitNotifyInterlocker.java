@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -29,41 +29,41 @@ import eu.javaspecialists.tjsn.concurrency.interlocker.*;
  * @author Dr Heinz M. Kabutz
  */
 public class WaitNotifyInterlocker extends Interlocker {
-    private boolean evenHasNextTurn = true;
-    private final Object lock = new Object();
+  private boolean evenHasNextTurn = true;
+  private final Object lock = new Object();
 
-    private class Job implements Runnable {
-        private final InterlockTask task;
-        private final boolean even;
+  private class Job implements Runnable {
+    private final InterlockTask task;
+    private final boolean even;
 
-        Job(InterlockTask task, boolean even) {
-            this.task = task;
-            this.even = even;
-        }
+    Job(InterlockTask task, boolean even) {
+      this.task = task;
+      this.even = even;
+    }
 
-        public void run() {
-            try {
-                while (!task.isDone()) {
-                    synchronized (lock) {
-                        while (!task.isDone() && (even ^ evenHasNextTurn)) {
-                            lock.wait();
-                        }
-                        if (task.isDone()) return;
-                        task.call();
-                        evenHasNextTurn = !evenHasNextTurn;
-                        lock.notify();
-                    }
-                }
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+    public void run() {
+      try {
+        while (!task.isDone()) {
+          synchronized (lock) {
+            while (!task.isDone() && (even ^ evenHasNextTurn)) {
+              lock.wait();
             }
+            if (task.isDone()) return;
+            task.call();
+            evenHasNextTurn = !evenHasNextTurn;
+            lock.notify();
+          }
         }
+      } catch (InterruptedException e) {
+        Thread.currentThread().interrupt();
+      }
     }
+  }
 
-    protected Runnable[] getRunnables(InterlockTask task) {
-        return new Runnable[]{
-                new Job(task, true),
-                new Job(task, false)
-        };
-    }
+  protected Runnable[] getRunnables(InterlockTask task) {
+    return new Runnable[]{
+        new Job(task, true),
+        new Job(task, false)
+    };
+  }
 }

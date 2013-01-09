@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -28,27 +28,27 @@ package eu.javaspecialists.tjsn.concurrency.interlocker;
  * @author Dr Heinz M. Kabutz
  */
 public class EmptyInterlockTask implements
-        InterlockTask<Integer> {
-    public final int upto;
-    private volatile int count;
+    InterlockTask<Integer> {
+  public final int upto;
+  private volatile int count;
 
-    public EmptyInterlockTask(int upto) {
-        this.upto = upto;
-    }
+  public EmptyInterlockTask(int upto) {
+    this.upto = upto;
+  }
 
-    public boolean isDone() {
-        return count >= upto;
-    }
+  public boolean isDone() {
+    return count >= upto;
+  }
 
-    public void call() {
-        count++;
-    }
+  public void call() {
+    count++;
+  }
 
-    public Integer get() {
-        return count;
-    }
+  public Integer get() {
+    return count;
+  }
 
-    public void reset() {
-        count = 0;
-    }
+  public void reset() {
+    count = 0;
+  }
 }

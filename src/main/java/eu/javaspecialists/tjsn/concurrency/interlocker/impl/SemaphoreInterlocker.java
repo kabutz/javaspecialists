@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -31,34 +31,34 @@ import java.util.concurrent.*;
  * @author Dr Heinz M. Kabutz
  */
 public class SemaphoreInterlocker extends Interlocker {
-    private static class Job implements Runnable {
-        private final InterlockTask task;
-        private final Semaphore first;
-        private final Semaphore second;
+  private static class Job implements Runnable {
+    private final InterlockTask task;
+    private final Semaphore first;
+    private final Semaphore second;
 
-        public Job(InterlockTask task,
-                   Semaphore first, Semaphore second) {
-            this.task = task;
-            this.first = first;
-            this.second = second;
-        }
-
-        public void run() {
-            while (!task.isDone()) {
-                first.acquireUninterruptibly();
-                if (task.isDone()) return;
-                task.call();
-                second.release();
-            }
-        }
+    public Job(InterlockTask task,
+               Semaphore first, Semaphore second) {
+      this.task = task;
+      this.first = first;
+      this.second = second;
     }
 
-    protected Runnable[] getRunnables(InterlockTask task) {
-        Semaphore even = new Semaphore(1);
-        Semaphore odd = new Semaphore(0);
-        return new Runnable[]{
-                new Job(task, even, odd),
-                new Job(task, odd, even)
-        };
+    public void run() {
+      while (!task.isDone()) {
+        first.acquireUninterruptibly();
+        if (task.isDone()) return;
+        task.call();
+        second.release();
+      }
     }
+  }
+
+  protected Runnable[] getRunnables(InterlockTask task) {
+    Semaphore even = new Semaphore(1);
+    Semaphore odd = new Semaphore(0);
+    return new Runnable[]{
+        new Job(task, even, odd),
+        new Job(task, odd, even)
+    };
+  }
 }

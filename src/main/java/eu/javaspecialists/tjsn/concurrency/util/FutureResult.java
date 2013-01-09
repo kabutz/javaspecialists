@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -28,24 +28,24 @@ package eu.javaspecialists.tjsn.concurrency.util;
  */
 
 public class FutureResult<V> {
-    private V value;
+  private V value;
 
-    private boolean ready;
+  private boolean ready;
 
-    public synchronized V get() throws InterruptedException {
-        while (!ready) {
-            wait(100);
-        }
-        return value;
+  public synchronized V get() throws InterruptedException {
+    while (!ready) {
+      wait(100);
     }
+    return value;
+  }
 
-    public synchronized void set(V newValue) {
-        value = newValue;
-        ready = true;
-        notifyAll();
-    }
+  public synchronized void set(V newValue) {
+    value = newValue;
+    ready = true;
+    notifyAll();
+  }
 
-    public synchronized boolean isReady() {
-        return ready;
-    }
+  public synchronized boolean isReady() {
+    return ready;
+  }
 }

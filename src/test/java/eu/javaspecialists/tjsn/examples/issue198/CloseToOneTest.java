@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -28,15 +28,15 @@ import static junit.framework.Assert.*;
  * @author Dr Heinz M. Kabutz
  */
 public class CloseToOneTest {
-    @Test
-    public void testClosestToOne() {
-        long first = (1 << 26) - 1;
-        long second = (1 << 27) - 1;
+  @Test
+  public void testClosestToOne() {
+    long first = (1 << 26) - 1;
+    long second = (1 << 27) - 1;
 
-        assertEquals(2, (int) (CloseToOne.makeDouble(first, second) + 1));
+    assertEquals(2, (int) (CloseToOne.makeDouble(first, second) + 1));
 
-        second--;
+    second--;
 
-        assertEquals(1, (int) (CloseToOne.makeDouble(first, second) + 1));
-    }
+    assertEquals(1, (int) (CloseToOne.makeDouble(first, second) + 1));
+  }
 }

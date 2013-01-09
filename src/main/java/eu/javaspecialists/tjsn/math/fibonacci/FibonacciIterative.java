@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -28,16 +28,16 @@ import java.math.*;
  * @author Dr Heinz M. Kabutz
  */
 public class FibonacciIterative extends NonCachingFibonacci {
-    public BigInteger calculate(int n) throws InterruptedException {
-        if (n < 0) throw new IllegalArgumentException();
-        BigInteger n0 = BigInteger.ZERO;
-        BigInteger n1 = BigInteger.ONE;
-        for (int i = 0; i < n; i++) {
-            if (Thread.interrupted()) throw new InterruptedException();
-            BigInteger temp = n1;
-            n1 = n1.add(n0);
-            n0 = temp;
-        }
-        return n0;
+  public BigInteger calculate(int n) throws InterruptedException {
+    if (n < 0) throw new IllegalArgumentException();
+    BigInteger n0 = BigInteger.ZERO;
+    BigInteger n1 = BigInteger.ONE;
+    for (int i = 0; i < n; i++) {
+      if (Thread.interrupted()) throw new InterruptedException();
+      BigInteger temp = n1;
+      n1 = n1.add(n0);
+      n0 = temp;
     }
+    return n0;
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -29,11 +29,11 @@ import eu.javaspecialists.tjsn.concurrency.interlocker.impl.*;
  * @author Dr Heinz M. Kabutz
  */
 public class Interlockers {
-    public static Interlocker createLockFreeInterlocker() {
-        return new LockFreeInterlocker();
-    }
+  public static Interlocker createLockFreeInterlocker() {
+    return new LockFreeInterlocker();
+  }
 
-    public static Interlocker createBlockingInterlocker() {
-        return new SemaphoreInterlocker();
-    }
+  public static Interlocker createBlockingInterlocker() {
+    return new SemaphoreInterlocker();
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -31,40 +31,40 @@ import java.util.concurrent.atomic.*;
  * @author Dr Heinz M. Kabutz
  */
 public class AtomicInterlocker extends Interlocker {
-    private enum Turn {
-        EVEN, ODD
+  private enum Turn {
+    EVEN, ODD
+  }
+
+  private static class Job implements Runnable {
+    private final InterlockTask task;
+    private final AtomicReference<Turn> nextTurn;
+    private final Turn turn;
+    private final Turn next;
+
+    private Job(InterlockTask task, AtomicReference<Turn> nextTurn, Turn turn) {
+      this.task = task;
+      this.nextTurn = nextTurn;
+      this.turn = turn;
+      next = Turn.values()[(turn.ordinal() + 1) % Turn.values().length];
     }
 
-    private static class Job implements Runnable {
-        private final InterlockTask task;
-        private final AtomicReference<Turn> nextTurn;
-        private final Turn turn;
-        private final Turn next;
-
-        private Job(InterlockTask task, AtomicReference<Turn> nextTurn, Turn turn) {
-            this.task = task;
-            this.nextTurn = nextTurn;
-            this.turn = turn;
-            next = Turn.values()[(turn.ordinal() + 1) % Turn.values().length];
+    public void run() {
+      while (!task.isDone()) {
+        while (!task.isDone() && nextTurn.get() != turn) {
+          // spin
         }
-
-        public void run() {
-            while (!task.isDone()) {
-                while (!task.isDone() && nextTurn.get() != turn) {
-                    // spin
-                }
-                if (task.isDone()) return;
-                task.call();
-                nextTurn.set(next);
-            }
-        }
+        if (task.isDone()) return;
+        task.call();
+        nextTurn.set(next);
+      }
     }
+  }
 
-    protected Runnable[] getRunnables(InterlockTask task) {
-        AtomicReference<Turn> nextTurn = new AtomicReference<Turn>(Turn.EVEN);
-        return new Runnable[]{
-                new Job(task, nextTurn, Turn.EVEN),
-                new Job(task, nextTurn, Turn.ODD)
-        };
-    }
+  protected Runnable[] getRunnables(InterlockTask task) {
+    AtomicReference<Turn> nextTurn = new AtomicReference<Turn>(Turn.EVEN);
+    return new Runnable[]{
+        new Job(task, nextTurn, Turn.EVEN),
+        new Job(task, nextTurn, Turn.ODD)
+    };
+  }
 }

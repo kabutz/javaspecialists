@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -31,11 +31,11 @@ import java.math.*;
  * @author Dr Heinz M. Kabutz
  */
 public class FibonacciRecursive extends Fibonacci {
-    public BigInteger doActualCalculate(int n) throws InterruptedException {
-        if (Thread.interrupted()) throw new InterruptedException();
-        if (n < 0) throw new IllegalArgumentException();
-        if (n == 0) return BigInteger.ZERO;
-        if (n == 1) return BigInteger.ONE;
-        return calculate(n - 1).add(calculate(n - 2));
-    }
+  public BigInteger doActualCalculate(int n) throws InterruptedException {
+    if (Thread.interrupted()) throw new InterruptedException();
+    if (n < 0) throw new IllegalArgumentException();
+    if (n == 0) return BigInteger.ZERO;
+    if (n == 1) return BigInteger.ONE;
+    return calculate(n - 1).add(calculate(n - 2));
+  }
 }

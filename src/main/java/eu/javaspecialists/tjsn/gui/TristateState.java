@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -24,21 +24,21 @@ package eu.javaspecialists.tjsn.gui;
  * @author Dr Heinz M. Kabutz
  */
 public enum TristateState {
-    SELECTED {
-        public TristateState next() {
-            return INDETERMINATE;
-        }
-    },
-    INDETERMINATE {
-        public TristateState next() {
-            return DESELECTED;
-        }
-    },
-    DESELECTED {
-        public TristateState next() {
-            return SELECTED;
-        }
-    };
+  SELECTED {
+    public TristateState next() {
+      return INDETERMINATE;
+    }
+  },
+  INDETERMINATE {
+    public TristateState next() {
+      return DESELECTED;
+    }
+  },
+  DESELECTED {
+    public TristateState next() {
+      return SELECTED;
+    }
+  };
 
-    public abstract TristateState next();
+  public abstract TristateState next();
 }

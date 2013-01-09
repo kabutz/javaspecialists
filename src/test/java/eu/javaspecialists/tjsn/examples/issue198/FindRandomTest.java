@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -28,16 +28,16 @@ import static org.junit.Assert.*;
  * @author Dr Heinz M. Kabutz
  */
 public class FindRandomTest {
-    @Test
-    public void testThatMinBiggerOrEqualToZero() {
-        double minDouble = FindRandom.findMinDouble();
-        assertTrue(minDouble >= 0.0);
-        assertTrue(minDouble < 1.0);
-    }
+  @Test
+  public void testThatMinBiggerOrEqualToZero() {
+    double minDouble = FindRandom.findMinDouble();
+    assertTrue(minDouble >= 0.0);
+    assertTrue(minDouble < 1.0);
+  }
 
-    @Test
-    public void testThatMaxLessThanOne() {
-        double maxDouble = FindRandom.findMaxDouble();
-        assertTrue(maxDouble < 1.0);
-    }
+  @Test
+  public void testThatMaxLessThanOne() {
+    double maxDouble = FindRandom.findMaxDouble();
+    assertTrue(maxDouble < 1.0);
+  }
 }

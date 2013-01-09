@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -31,55 +31,55 @@ import java.util.concurrent.locks.*;
  * @author Dr Heinz M. Kabutz
  */
 public class ConditionInterlocker extends Interlocker {
-    // does not have to be volatile as all access is lock protected
-    private boolean evenHasNextTurn = true;
+  // does not have to be volatile as all access is lock protected
+  private boolean evenHasNextTurn = true;
 
-    private class Job implements Runnable {
-        private final InterlockTask task;
-        private final boolean even;
-        private final Lock lock;
-        private final Condition firstCondition;
-        private final Condition secondCondition;
+  private class Job implements Runnable {
+    private final InterlockTask task;
+    private final boolean even;
+    private final Lock lock;
+    private final Condition firstCondition;
+    private final Condition secondCondition;
 
-        Job(InterlockTask task, boolean even, Lock lock,
-            Condition firstCondition, Condition secondCondition) {
-            this.task = task;
-            this.even = even;
-            this.lock = lock;
-            this.firstCondition = firstCondition;
-            this.secondCondition = secondCondition;
-        }
+    Job(InterlockTask task, boolean even, Lock lock,
+        Condition firstCondition, Condition secondCondition) {
+      this.task = task;
+      this.even = even;
+      this.lock = lock;
+      this.firstCondition = firstCondition;
+      this.secondCondition = secondCondition;
+    }
 
-        public void run() {
-            try {
-                while (!task.isDone()) {
-                    lock.lock();
-                    try {
-                        while (!task.isDone() && (even ^ evenHasNextTurn)) {
-                            firstCondition.await();
-                        }
-                        if (task.isDone()) return;
-                        task.call();
-                        evenHasNextTurn = !evenHasNextTurn;
-                        secondCondition.signal();
-                    } finally {
-                        lock.unlock();
-                    }
-                }
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+    public void run() {
+      try {
+        while (!task.isDone()) {
+          lock.lock();
+          try {
+            while (!task.isDone() && (even ^ evenHasNextTurn)) {
+              firstCondition.await();
             }
+            if (task.isDone()) return;
+            task.call();
+            evenHasNextTurn = !evenHasNextTurn;
+            secondCondition.signal();
+          } finally {
+            lock.unlock();
+          }
         }
+      } catch (InterruptedException e) {
+        Thread.currentThread().interrupt();
+      }
     }
+  }
 
-    protected Runnable[] getRunnables(InterlockTask task) {
-        Lock lock = new ReentrantLock();
-        Condition even_condition = lock.newCondition();
-        Condition odd_condition = lock.newCondition();
+  protected Runnable[] getRunnables(InterlockTask task) {
+    Lock lock = new ReentrantLock();
+    Condition even_condition = lock.newCondition();
+    Condition odd_condition = lock.newCondition();
 
-        return new Runnable[]{
-                new Job(task, true, lock, even_condition, odd_condition),
-                new Job(task, false, lock, odd_condition, even_condition)
-        };
-    }
+    return new Runnable[]{
+        new Job(task, true, lock, even_condition, odd_condition),
+        new Job(task, false, lock, odd_condition, even_condition)
+    };
+  }
 }

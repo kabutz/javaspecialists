@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -32,65 +32,65 @@ import java.util.concurrent.*;
  */
 public class FibonacciRecursiveBowbeer extends Fibonacci {
 
-    private final Map<Integer, BigInteger> values = new HashMap<>();
+  private final Map<Integer, BigInteger> values = new HashMap<>();
 
-    private final Map<BigInteger, BigInteger> squares = new HashMap<>();
+  private final Map<BigInteger, BigInteger> squares = new HashMap<>();
 
-    private final Karatsuba karatsuba;
+  private final Karatsuba karatsuba;
 
-    public FibonacciRecursiveBowbeer(ForkJoinPool pool) {
-        this(new ParallelKaratsuba(pool));
+  public FibonacciRecursiveBowbeer(ForkJoinPool pool) {
+    this(new ParallelKaratsuba(pool));
+  }
+
+  public FibonacciRecursiveBowbeer() {
+    this(new ForkJoinPool());
+  }
+
+  public FibonacciRecursiveBowbeer(Karatsuba karatsuba) {
+    this.karatsuba = karatsuba;
+  }
+
+  @Override
+  protected BigInteger doActualCalculate(int n) throws InterruptedException {
+    if (Thread.interrupted()) throw new InterruptedException();
+    if (n == 0) {
+      return BigInteger.ZERO;
     }
-
-    public FibonacciRecursiveBowbeer() {
-        this(new ForkJoinPool());
+    if (n == 1) {
+      return BigInteger.ONE;
     }
-
-    public FibonacciRecursiveBowbeer(Karatsuba karatsuba) {
-        this.karatsuba = karatsuba;
+    int left = (n + 1) / 2;
+    int right = left - 1;
+    BigInteger fibRight = values.get(right);
+    if (fibRight == null) {
+      fibRight = doActualCalculate(right);
     }
-
-    @Override
-    protected BigInteger doActualCalculate(int n) throws InterruptedException {
-        if (Thread.interrupted()) throw new InterruptedException();
-        if (n == 0) {
-            return BigInteger.ZERO;
-        }
-        if (n == 1) {
-            return BigInteger.ONE;
-        }
-        int left = (n + 1) / 2;
-        int right = left - 1;
-        BigInteger fibRight = values.get(right);
-        if (fibRight == null) {
-            fibRight = doActualCalculate(right);
-        }
-        BigInteger fibLeft = values.get(left);
-        if (fibLeft == null) {
-            fibLeft = doActualCalculate(left);
-        }
-        BigInteger result;
-        if ((n & 1) == 0) {
-            // f(2n) = (2 * f(n-1) + f(n)) * f(n)
-            result = multiply(fibLeft, fibLeft.add(fibRight.shiftLeft(1)));
-        } else {
-            // f(2n-1) = f(n-1)^2 + f(n)^2
-            result = square(fibLeft).add(square(fibRight));
-        }
-        values.put(n, result);
-        return result;
+    BigInteger fibLeft = values.get(left);
+    if (fibLeft == null) {
+      fibLeft = doActualCalculate(left);
     }
-
-    protected BigInteger multiply(BigInteger x, BigInteger y) {
-        return karatsuba.multiply(x, y);
+    BigInteger result;
+    if ((n & 1) == 0) {
+      // f(2n) = (2 * f(n-1) + f(n)) * f(n)
+      result = multiply(fibLeft, fibLeft.add(fibRight.shiftLeft(1)));
+    } else {
+      // f(2n-1) = f(n-1)^2 + f(n)^2
+      result = square(fibLeft).add(square(fibRight));
     }
+    values.put(n, result);
+    return result;
+  }
 
-    protected BigInteger square(BigInteger num) {
-        BigInteger result = squares.get(num);
-        if (result == null) {
-            result = karatsuba.square(num);
-            squares.put(num, result);
-        }
-        return result;
+  protected BigInteger multiply(BigInteger x, BigInteger y) {
+    return karatsuba.multiply(x, y);
+  }
+
+  protected BigInteger square(BigInteger num) {
+    BigInteger result = squares.get(num);
+    if (result == null) {
+      result = karatsuba.square(num);
+      squares.put(num, result);
     }
+    return result;
+  }
 }

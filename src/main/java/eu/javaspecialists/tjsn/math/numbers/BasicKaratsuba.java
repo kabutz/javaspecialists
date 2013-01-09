@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -54,62 +54,62 @@ import static eu.javaspecialists.tjsn.math.numbers.BigIntegerUtils.*;
  * @author Joe Bowbeer
  */
 public class BasicKaratsuba implements Karatsuba {
-    public static final String THRESHOLD_PROPERTY_NAME =
-            "eu.javaspecialists.tjsn.math.numbers.BasicKaratsubaThreshold";
-    private static final int THRESHOLD = Integer.getInteger(
-            THRESHOLD_PROPERTY_NAME, 1000);
+  public static final String THRESHOLD_PROPERTY_NAME =
+      "eu.javaspecialists.tjsn.math.numbers.BasicKaratsubaThreshold";
+  private static final int THRESHOLD = Integer.getInteger(
+      THRESHOLD_PROPERTY_NAME, 1000);
 
-    public BigInteger multiply(BigInteger x, BigInteger y) {
-        int m = java.lang.Math.min(x.bitLength(), y.bitLength()) / 2;
-        if (m <= THRESHOLD)
-            return x.multiply(y);
+  public BigInteger multiply(BigInteger x, BigInteger y) {
+    int m = java.lang.Math.min(x.bitLength(), y.bitLength()) / 2;
+    if (m <= THRESHOLD)
+      return x.multiply(y);
 
-        // x = x1 * 2^m + x0
-        // y = y1 * 2^m + y0
-        BigInteger[] xs = BigIntegerUtils.split(x, m);
-        BigInteger[] ys = BigIntegerUtils.split(y, m);
+    // x = x1 * 2^m + x0
+    // y = y1 * 2^m + y0
+    BigInteger[] xs = BigIntegerUtils.split(x, m);
+    BigInteger[] ys = BigIntegerUtils.split(y, m);
 
-        // xy = (x1 * 2^m + x0)(y1 * 2^m + y0) = z2 * 2^2m + z1 * 2^m + z0
-        // where:
-        // z2 = x1 * y1
-        // z0 = x0 * y0
-        // z1 = x1 * y0 + x0 * y1 = (x1 + x0)(y1 + y0) - z2 - z0
-        BigInteger z2 = multiply(xs[0], ys[0]);
-        BigInteger z0 = multiply(xs[1], ys[1]);
-        BigInteger z1 = multiply(add(xs), add(ys)).
-                subtract(z2).subtract(z0);
+    // xy = (x1 * 2^m + x0)(y1 * 2^m + y0) = z2 * 2^2m + z1 * 2^m + z0
+    // where:
+    // z2 = x1 * y1
+    // z0 = x0 * y0
+    // z1 = x1 * y0 + x0 * y1 = (x1 + x0)(y1 + y0) - z2 - z0
+    BigInteger z2 = multiply(xs[0], ys[0]);
+    BigInteger z0 = multiply(xs[1], ys[1]);
+    BigInteger z1 = multiply(add(xs), add(ys)).
+        subtract(z2).subtract(z0);
 
-        // result = z2 * 2^2m + z1 * 2^m + z0
-        return z2.shiftLeft(2 * m).add(z1.shiftLeft(m)).add(z0);
+    // result = z2 * 2^2m + z1 * 2^m + z0
+    return z2.shiftLeft(2 * m).add(z1.shiftLeft(m)).add(z0);
+  }
+
+
+  /**
+   * Optimizes the square of large numbers using the Karatsuba algorithm.
+   *
+   * @author Joe Bowbeer
+   */
+  public BigInteger square(BigInteger x) {
+
+    int m = x.bitLength() / 2;
+    if (m <= THRESHOLD * 2) {
+      return x.pow(2);
     }
 
+    // x = x1 * 2^m + x0
+    BigInteger[] xs = split(x, m);
 
-    /**
-     * Optimizes the square of large numbers using the Karatsuba algorithm.
-     *
-     * @author Joe Bowbeer
-     */
-    public BigInteger square(BigInteger x) {
+    // x^2 = (x1 * 2^m + x0)(x1 * 2^m + x0) = z2 * 2^2m + z1 * 2^m + z0
+    // where:
+    // z2 = x1 * x1
+    // z0 = x0 * x0
+    // z1 = x1 * x0 + x0 * x1 = (x1 + x0)(x1 + x0) - z2 - z0
+    BigInteger z2 = square(xs[0]);
+    BigInteger z0 = square(xs[1]);
+    BigInteger z1 = square(add(xs)).subtract(z2).subtract(z0);
 
-        int m = x.bitLength() / 2;
-        if (m <= THRESHOLD * 2) {
-            return x.pow(2);
-        }
-
-        // x = x1 * 2^m + x0
-        BigInteger[] xs = split(x, m);
-
-        // x^2 = (x1 * 2^m + x0)(x1 * 2^m + x0) = z2 * 2^2m + z1 * 2^m + z0
-        // where:
-        // z2 = x1 * x1
-        // z0 = x0 * x0
-        // z1 = x1 * x0 + x0 * x1 = (x1 + x0)(x1 + x0) - z2 - z0
-        BigInteger z2 = square(xs[0]);
-        BigInteger z0 = square(xs[1]);
-        BigInteger z1 = square(add(xs)).subtract(z2).subtract(z0);
-
-        // result = z2 * 2^2m + z1 * 2^m + z0
-        return z2.shiftLeft(2 * m).add(z1.shiftLeft(m)).add(z0);
-    }
+    // result = z2 * 2^2m + z1 * 2^m + z0
+    return z2.shiftLeft(2 * m).add(z1.shiftLeft(m)).add(z0);
+  }
 
 }

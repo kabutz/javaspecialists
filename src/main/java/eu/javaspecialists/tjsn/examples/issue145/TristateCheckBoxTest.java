@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -30,74 +30,74 @@ import java.awt.event.*;
  * @author Dr Heinz M. Kabutz
  */
 public class TristateCheckBoxTest {
-    public static void main(String args[]) throws Exception {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                JFrame frame = new JFrame("TristateCheckBoxTest");
-                frame.setLayout(new GridLayout(0, 1, 15, 15));
-                UIManager.LookAndFeelInfo[] lfs =
-                        UIManager.getInstalledLookAndFeels();
-                for (UIManager.LookAndFeelInfo lf : lfs) {
-                    System.out.println("Look&Feel " + lf.getName());
-                    try {
-                        UIManager.setLookAndFeel(lf.getClassName());
-                    } catch (RuntimeException e) {
-                        throw e;
-                    } catch (Exception e) {
-                        throw new IllegalStateException(e);
-                    }
-                    frame.add(makePanel());
-                }
-                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-                frame.pack();
-                frame.setVisible(true);
-            }
-        });
-    }
+  public static void main(String args[]) throws Exception {
+    SwingUtilities.invokeLater(new Runnable() {
+      public void run() {
+        JFrame frame = new JFrame("TristateCheckBoxTest");
+        frame.setLayout(new GridLayout(0, 1, 15, 15));
+        UIManager.LookAndFeelInfo[] lfs =
+            UIManager.getInstalledLookAndFeels();
+        for (UIManager.LookAndFeelInfo lf : lfs) {
+          System.out.println("Look&Feel " + lf.getName());
+          try {
+            UIManager.setLookAndFeel(lf.getClassName());
+          } catch (RuntimeException e) {
+            throw e;
+          } catch (Exception e) {
+            throw new IllegalStateException(e);
+          }
+          frame.add(makePanel());
+        }
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+      }
+    });
+  }
 
-    private static JPanel makePanel() {
-        final TristateCheckBox tristateBox = new TristateCheckBox(
-                "Tristate checkbox");
-        tristateBox.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent e) {
-                switch (tristateBox.getState()) {
-                    case SELECTED:
-                        System.out.println("Selected");
-                        break;
-                    case DESELECTED:
-                        System.out.println("Not Selected");
-                        break;
-                    case INDETERMINATE:
-                        System.out.println("Tristate Selected");
-                        break;
-                }
-            }
-        });
-        tristateBox.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                System.out.println(e);
-            }
-        });
-        final JCheckBox normalBox = new JCheckBox("Normal checkbox");
-        normalBox.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                System.out.println(e);
-            }
-        });
+  private static JPanel makePanel() {
+    final TristateCheckBox tristateBox = new TristateCheckBox(
+        "Tristate checkbox");
+    tristateBox.addItemListener(new ItemListener() {
+      public void itemStateChanged(ItemEvent e) {
+        switch (tristateBox.getState()) {
+          case SELECTED:
+            System.out.println("Selected");
+            break;
+          case DESELECTED:
+            System.out.println("Not Selected");
+            break;
+          case INDETERMINATE:
+            System.out.println("Tristate Selected");
+            break;
+        }
+      }
+    });
+    tristateBox.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        System.out.println(e);
+      }
+    });
+    final JCheckBox normalBox = new JCheckBox("Normal checkbox");
+    normalBox.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        System.out.println(e);
+      }
+    });
 
-        final JCheckBox enabledBox = new JCheckBox("Enable", true);
-        enabledBox.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent e) {
-                tristateBox.setEnabled(enabledBox.isSelected());
-                normalBox.setEnabled(enabledBox.isSelected());
-            }
-        });
+    final JCheckBox enabledBox = new JCheckBox("Enable", true);
+    enabledBox.addItemListener(new ItemListener() {
+      public void itemStateChanged(ItemEvent e) {
+        tristateBox.setEnabled(enabledBox.isSelected());
+        normalBox.setEnabled(enabledBox.isSelected());
+      }
+    });
 
-        JPanel panel = new JPanel(new GridLayout(0, 1, 5, 5));
-        panel.add(new JLabel(UIManager.getLookAndFeel().getName()));
-        panel.add(tristateBox);
-        panel.add(normalBox);
-        panel.add(enabledBox);
-        return panel;
-    }
+    JPanel panel = new JPanel(new GridLayout(0, 1, 5, 5));
+    panel.add(new JLabel(UIManager.getLookAndFeel().getName()));
+    panel.add(tristateBox);
+    panel.add(normalBox);
+    panel.add(enabledBox);
+    return panel;
+  }
 }

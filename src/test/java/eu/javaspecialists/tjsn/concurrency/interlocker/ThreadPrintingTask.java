@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -29,27 +29,27 @@ import java.util.concurrent.atomic.*;
  * @author Dr Heinz M. Kabutz
  */
 public class ThreadPrintingTask implements InterlockTask<Integer> {
-    private final int upto;
-    private AtomicInteger row = new AtomicInteger(0);
+  private final int upto;
+  private AtomicInteger row = new AtomicInteger(0);
 
-    public ThreadPrintingTask(int upto) {
-        this.upto = upto;
-    }
+  public ThreadPrintingTask(int upto) {
+    this.upto = upto;
+  }
 
-    public boolean isDone() {
-        return row.get() >= upto;
-    }
+  public boolean isDone() {
+    return row.get() >= upto;
+  }
 
-    public void call() {
-        System.out.println(Thread.currentThread().getName());
-        row.incrementAndGet();
-    }
+  public void call() {
+    System.out.println(Thread.currentThread().getName());
+    row.incrementAndGet();
+  }
 
-    public Integer get() {
-        return upto;
-    }
+  public Integer get() {
+    return upto;
+  }
 
-    public void reset() {
-        row.set(0);
-    }
+  public void reset() {
+    row.set(0);
+  }
 }

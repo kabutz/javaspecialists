@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -26,26 +26,26 @@ import java.math.*;
  * @author Dr Heinz M. Kabutz
  */
 public abstract class Fibonacci {
-    private final FibonacciCache cache;
+  private final FibonacciCache cache;
 
-    protected Fibonacci(FibonacciCache cache) {
-        this.cache = cache;
+  protected Fibonacci(FibonacciCache cache) {
+    this.cache = cache;
+  }
+
+  public Fibonacci() {
+    this(null);
+  }
+
+  public BigInteger calculate(int n) throws InterruptedException {
+    if (cache == null) return doActualCalculate(n);
+
+    BigInteger result = cache.get(n);
+    if (result == null) {
+      cache.put(n, result = doActualCalculate(n));
     }
+    return result;
+  }
 
-    public Fibonacci() {
-        this(null);
-    }
-
-    public BigInteger calculate(int n) throws InterruptedException {
-        if (cache == null) return doActualCalculate(n);
-
-        BigInteger result = cache.get(n);
-        if (result == null) {
-            cache.put(n, result = doActualCalculate(n));
-        }
-        return result;
-    }
-
-    protected abstract BigInteger doActualCalculate(int n)
-            throws InterruptedException;
+  protected abstract BigInteger doActualCalculate(int n)
+      throws InterruptedException;
 }

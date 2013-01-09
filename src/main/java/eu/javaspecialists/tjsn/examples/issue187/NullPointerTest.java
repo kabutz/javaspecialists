@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2000-2012 Heinz Max Kabutz
+ * Copyright (C) 2000-2013 Heinz Max Kabutz
  *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.  Heinz Max Kabutz licenses
@@ -26,45 +26,45 @@ import java.util.*;
  * @author Dr Heinz M. Kabutz
  */
 public class NullPointerTest extends DuplicateExceptionChecker {
-    private final Object[] randomObjects =
-            new Object[1000 * 1000];
+  private final Object[] randomObjects =
+      new Object[1000 * 1000];
 
-    private final String[] randomStrings =
-            new String[1000 * 1000];
+  private final String[] randomStrings =
+      new String[1000 * 1000];
 
-    public static void main(String[] args) {
-        NullPointerTest npt = new NullPointerTest();
-        npt.fillArrays(0.01);
-        npt.test();
+  public static void main(String[] args) {
+    NullPointerTest npt = new NullPointerTest();
+    npt.fillArrays(0.01);
+    npt.test();
+  }
+
+  public void notifyOfDuplicate(Exception e) {
+    super.notifyOfDuplicate(e);
+    System.exit(1);
+  }
+
+  private void fillArrays(double probabilityObjectIsNull) {
+    Random random = new Random(0);
+    for (int i = 0; i < randomObjects.length; i++) {
+      if (random.nextDouble() < probabilityObjectIsNull) {
+        randomObjects[i] = null;
+      } else {
+        randomObjects[i] = new Integer(i);
+      }
     }
+    Arrays.fill(randomStrings, null);
+  }
 
-    public void notifyOfDuplicate(Exception e) {
-        super.notifyOfDuplicate(e);
-        System.exit(1);
-    }
-
-    private void fillArrays(double probabilityObjectIsNull) {
-        Random random = new Random(0);
-        for (int i = 0; i < randomObjects.length; i++) {
-            if (random.nextDouble() < probabilityObjectIsNull) {
-                randomObjects[i] = null;
-            } else {
-                randomObjects[i] = new Integer(i);
-            }
+  private void test() {
+    for (int i = 0; i < 100; i++) {
+      for (int j = 0; j < randomObjects.length; j++) {
+        try {
+          randomStrings[j] = randomObjects[j].toString();
+        } catch (NullPointerException e) {
+          randomStrings[j] = null;
+          handleException(e);
         }
-        Arrays.fill(randomStrings, null);
+      }
     }
-
-    private void test() {
-        for (int i = 0; i < 100; i++) {
-            for (int j = 0; j < randomObjects.length; j++) {
-                try {
-                    randomStrings[j] = randomObjects[j].toString();
-                } catch (NullPointerException e) {
-                    randomStrings[j] = null;
-                    handleException(e);
-                }
-            }
-        }
-    }
+  }
 }
