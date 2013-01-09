@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package eu.javaspecialists.tjsn.examples.issue193;
+package eu.javaspecialists.tjsn.examples.issue193.objectfactories;
 
 import eu.javaspecialists.tjsn.memory.*;
 import org.cliffc.high_scale_lib.*;
