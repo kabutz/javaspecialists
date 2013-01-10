@@ -27,7 +27,7 @@ package eu.javaspecialists.tjsn.concurrency.util;
  * @author Joe Bowbeer, Dr Heinz M. Kabutz
  */
 
-public class FutureResult<V> {
+final public class FutureResult<V> {
     private V value;
 
     private boolean ready;

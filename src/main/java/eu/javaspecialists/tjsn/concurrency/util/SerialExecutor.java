@@ -27,7 +27,7 @@ import java.util.concurrent.*;
  * @author Doug Lea
  * @see java.util.concurrent.Executor
  */
-public class SerialExecutor implements Executor {
+final public class SerialExecutor implements Executor {
     private final Queue<Runnable> tasks = new ArrayDeque<>();
     private final Executor executor;
     private Runnable active;

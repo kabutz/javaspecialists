@@ -20,7 +20,7 @@ package eu.javaspecialists.tjsn.concurrency.util;
 
 import sun.misc.*;
 
-public class MonitorUtils {
+final public class MonitorUtils {
     private static Unsafe unsafe = UnsafeProvider.getUnsafe();
 
     public static void synchronize(Object monitor) {
