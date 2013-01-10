@@ -23,14 +23,31 @@ import java.util.concurrent.locks.*;
 /**
  * From http://www.javaspecialists.eu/archive/Issue190.html
  */
-public class AutoLock implements AutoCloseable {
+final public class AutoLock implements AutoCloseable {
     public static AutoLock lock(Lock lock) {
-        return new AutoLockNormal(lock);
+        return new AutoLock(lock);
     }
 
     public static AutoLock lockInterruptibly(Lock lock)
             throws InterruptedException {
-        return new AutoLockInterruptibly(lock);
+        return new AutoLock(lock, true);
+    }
+
+    public static AutoLock read(ReadWriteLock lock) {
+        return new AutoLock(lock.readLock());
+    }
+
+    public static AutoLock write(ReadWriteLock lock) {
+        if (lock instanceof ReentrantReadWriteLock) {
+            ReentrantReadWriteLock rwlock = (ReentrantReadWriteLock) lock;
+            if (rwlock.getReadHoldCount() > 0
+                    && !rwlock.isWriteLockedByCurrentThread()) {
+                throw new IllegalMonitorStateException(
+                        "ReentrantReadWriteLocks cannot be upgraded from " +
+                                "read lock to write lock");
+            }
+        }
+        return new AutoLock(lock.writeLock());
     }
 
     private final Lock lock;
@@ -41,20 +58,12 @@ public class AutoLock implements AutoCloseable {
 
     private AutoLock(Lock lock) {
         this.lock = lock;
+        lock.lock();
     }
 
-    private static class AutoLockNormal extends AutoLock {
-        public AutoLockNormal(Lock lock) {
-            super(lock);
-            lock.lock();
-        }
-    }
-
-    private static class AutoLockInterruptibly extends AutoLock {
-        public AutoLockInterruptibly(Lock lock)
-                throws InterruptedException {
-            super(lock);
-            lock.lockInterruptibly();
-        }
+    private AutoLock(Lock lock, boolean allowInterrupts)
+            throws InterruptedException {
+        this.lock = lock;
+        lock.lockInterruptibly();
     }
 }
