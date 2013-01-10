@@ -24,21 +24,21 @@ package eu.javaspecialists.tjsn.gui;
  * @author Dr Heinz M. Kabutz
  */
 public enum TristateState {
-  SELECTED {
-    public TristateState next() {
-      return INDETERMINATE;
-    }
-  },
-  INDETERMINATE {
-    public TristateState next() {
-      return DESELECTED;
-    }
-  },
-  DESELECTED {
-    public TristateState next() {
-      return SELECTED;
-    }
-  };
+    SELECTED {
+        public TristateState next() {
+            return INDETERMINATE;
+        }
+    },
+    INDETERMINATE {
+        public TristateState next() {
+            return DESELECTED;
+        }
+    },
+    DESELECTED {
+        public TristateState next() {
+            return SELECTED;
+        }
+    };
 
-  public abstract TristateState next();
+    public abstract TristateState next();
 }

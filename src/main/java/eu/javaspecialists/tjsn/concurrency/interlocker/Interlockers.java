@@ -29,11 +29,11 @@ import eu.javaspecialists.tjsn.concurrency.interlocker.impl.*;
  * @author Dr Heinz M. Kabutz
  */
 public class Interlockers {
-  public static Interlocker createLockFreeInterlocker() {
-    return new LockFreeInterlocker();
-  }
+    public static Interlocker createLockFreeInterlocker() {
+        return new LockFreeInterlocker();
+    }
 
-  public static Interlocker createBlockingInterlocker() {
-    return new SemaphoreInterlocker();
-  }
+    public static Interlocker createBlockingInterlocker() {
+        return new SemaphoreInterlocker();
+    }
 }

@@ -33,10 +33,10 @@ import java.math.*;
  * @author Dr Heinz M. Kabutz
  */
 public class FibonacciRecursiveDijkstraKaratsuba
-    extends FibonacciRecursiveDijkstra {
-  private final Karatsuba karatsuba = new BasicKaratsuba();
+        extends FibonacciRecursiveDijkstra {
+    private final Karatsuba karatsuba = new BasicKaratsuba();
 
-  protected BigInteger multiply(BigInteger bi0, BigInteger bi1) {
-    return karatsuba.multiply(bi0, bi1);
-  }
+    protected BigInteger multiply(BigInteger bi0, BigInteger bi1) {
+        return karatsuba.multiply(bi0, bi1);
+    }
 }

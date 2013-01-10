@@ -23,7 +23,7 @@ import eu.javaspecialists.tjsn.memory.*;
 import java.util.concurrent.*;
 
 public class ConcurrentHashMapFactory implements ObjectFactory {
-  public Object makeObject() {
-    return new ConcurrentHashMap();
-  }
+    public Object makeObject() {
+        return new ConcurrentHashMap();
+    }
 }

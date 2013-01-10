@@ -23,7 +23,7 @@ import eu.javaspecialists.tjsn.memory.*;
 import java.util.concurrent.locks.*;
 
 public class ReentrantLockFactory implements ObjectFactory {
-  public Object makeObject() {
-    return new ReentrantLock();
-  }
+    public Object makeObject() {
+        return new ReentrantLock();
+    }
 }

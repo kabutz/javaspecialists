@@ -27,15 +27,15 @@ import java.math.*;
  * @author Dr Heinz M. Kabutz
  */
 public abstract class NonCachingFibonacci extends Fibonacci {
-  protected NonCachingFibonacci() {
-    super(null);
-  }
+    protected NonCachingFibonacci() {
+        super(null);
+    }
 
-  public final BigInteger doActualCalculate(int n)
-      throws InterruptedException {
-    throw new UnsupportedOperationException();
-  }
+    public final BigInteger doActualCalculate(int n)
+            throws InterruptedException {
+        throw new UnsupportedOperationException();
+    }
 
-  public abstract BigInteger calculate(int n)
-      throws InterruptedException;
+    public abstract BigInteger calculate(int n)
+            throws InterruptedException;
 }

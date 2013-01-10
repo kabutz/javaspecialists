@@ -29,23 +29,23 @@ import java.util.concurrent.*;
  * @author Dr Heinz M. Kabutz
  */
 public class FinallyJava {
-  public void foo() {
-    try {
-      if (ThreadLocalRandom.current().nextBoolean()) {
-        System.out.println("First random true");
-        return;
-      }
-      if (ThreadLocalRandom.current().nextBoolean()) {
-        System.out.println("Second random true");
-        return;
-      }
-      System.out.println("Both randoms false");
-    } finally {
-      System.out.println("Done");
+    public void foo() {
+        try {
+            if (ThreadLocalRandom.current().nextBoolean()) {
+                System.out.println("First random true");
+                return;
+            }
+            if (ThreadLocalRandom.current().nextBoolean()) {
+                System.out.println("Second random true");
+                return;
+            }
+            System.out.println("Both randoms false");
+        } finally {
+            System.out.println("Done");
+        }
     }
-  }
 
-  public static void main(String[] args) {
-    new FinallyJava().foo();
-  }
+    public static void main(String[] args) {
+        new FinallyJava().foo();
+    }
 }

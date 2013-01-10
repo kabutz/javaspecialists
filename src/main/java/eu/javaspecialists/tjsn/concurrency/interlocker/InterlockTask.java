@@ -26,18 +26,18 @@ package eu.javaspecialists.tjsn.concurrency.interlocker;
  * @author Dr Heinz M. Kabutz
  */
 public interface InterlockTask<T> {
-  boolean isDone();
+    boolean isDone();
 
-  /**
-   * The call() method is called interleaved by the the threads in a
-   * round-robin fashion.
-   */
-  void call();
+    /**
+     * The call() method is called interleaved by the the threads in a
+     * round-robin fashion.
+     */
+    void call();
 
-  /**
-   * Returns the result after all the call()'s have completed.
-   */
-  T get();
+    /**
+     * Returns the result after all the call()'s have completed.
+     */
+    T get();
 
-  void reset();
+    void reset();
 }

@@ -29,7 +29,7 @@ import java.math.*;
  * @author Dr Heinz M. Kabutz
  */
 public interface Karatsuba {
-  BigInteger multiply(BigInteger x, BigInteger y);
+    BigInteger multiply(BigInteger x, BigInteger y);
 
-  BigInteger square(BigInteger x);
+    BigInteger square(BigInteger x);
 }

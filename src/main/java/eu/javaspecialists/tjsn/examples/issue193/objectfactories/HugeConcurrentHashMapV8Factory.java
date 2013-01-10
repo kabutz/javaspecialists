@@ -22,7 +22,7 @@ import eu.javaspecialists.tjsn.memory.*;
 import jsr166e.*;
 
 public class HugeConcurrentHashMapV8Factory implements ObjectFactory {
-  public Object makeObject() {
-    return new ConcurrentHashMapV8(16, .75f, 4096);
-  }
+    public Object makeObject() {
+        return new ConcurrentHashMapV8(16, .75f, 4096);
+    }
 }

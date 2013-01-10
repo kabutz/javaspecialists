@@ -23,9 +23,9 @@ import eu.javaspecialists.tjsn.memory.*;
 import java.util.*;
 
 public class SynchronizedHashMapFactory implements ObjectFactory {
-  public Object makeObject() {
-    return Collections.synchronizedMap(new HashMap());
-  }
+    public Object makeObject() {
+        return Collections.synchronizedMap(new HashMap());
+    }
 }
 
 

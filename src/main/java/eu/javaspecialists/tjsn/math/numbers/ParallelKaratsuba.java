@@ -37,98 +37,98 @@ import static eu.javaspecialists.tjsn.math.numbers.BigIntegerUtils.*;
  * @author Joe Bowbeer
  */
 public class ParallelKaratsuba implements Karatsuba {
-  public static final String THRESHOLD_PROPERTY_NAME =
-      "eu.javaspecialists.tjsn.math.numbers.ParallelKaratsubaThreshold";
-  private static final int THRESHOLD = Integer.getInteger(
-      THRESHOLD_PROPERTY_NAME, 1000);
-  private final ForkJoinPool pool;
+    public static final String THRESHOLD_PROPERTY_NAME =
+            "eu.javaspecialists.tjsn.math.numbers.ParallelKaratsubaThreshold";
+    private static final int THRESHOLD = Integer.getInteger(
+            THRESHOLD_PROPERTY_NAME, 1000);
+    private final ForkJoinPool pool;
 
-  public ParallelKaratsuba(ForkJoinPool pool) {
-    this.pool = pool;
-  }
-
-  public BigInteger multiply(BigInteger x, BigInteger y) {
-    return pool.invoke(new MultiplyTask(x, y));
-  }
-
-  public BigInteger square(BigInteger x) {
-    return pool.invoke(new SquareTask(x));
-  }
-
-  private static class MultiplyTask extends RecursiveTask<BigInteger> {
-    private final BigInteger x, y;
-
-    public MultiplyTask(BigInteger x, BigInteger y) {
-      this.x = x;
-      this.y = y;
+    public ParallelKaratsuba(ForkJoinPool pool) {
+        this.pool = pool;
     }
 
-    protected BigInteger compute() {
-      int m = (Math.min(x.bitLength(), y.bitLength()) / 2);
-      if (m <= THRESHOLD) {
-        return x.multiply(y);
-      }
-
-      // x = x1 * 2^m + x0
-      // y = y1 * 2^m + y0
-      BigInteger[] xs = split(x, m);
-      BigInteger[] ys = split(y, m);
-
-      // xy = (x1 * 2^m + x0)(y1 * 2^m + y0) = z2 * 2^2m + z1 * 2^m + z0
-      // where:
-      // z2 = x1 * y1
-      // z0 = x0 * y0
-      // z1 = x1 * y0 + x0 * y1 = (x1 + x0)(y1 + y0) - z2 - z0
-      MultiplyTask z2task = new MultiplyTask(xs[0], ys[0]);
-      MultiplyTask z0task = new MultiplyTask(xs[1], ys[1]);
-      MultiplyTask z1task = new MultiplyTask(add(xs), add(ys));
-
-      z0task.fork();
-      z2task.fork();
-      BigInteger z0, z2;
-      BigInteger z1 = z1task.invoke().subtract(
-          z2 = z2task.join()).subtract(z0 = z0task.join());
-
-      // result = z2 * 2^2m + z1 * 2^m + z0
-      return z2.shiftLeft(2 * m).add(z1.shiftLeft(m)).add(z0);
-    }
-  }
-
-  private static class SquareTask extends RecursiveTask<BigInteger> {
-    private final BigInteger x;
-
-    public SquareTask(BigInteger x) {
-      this.x = x;
+    public BigInteger multiply(BigInteger x, BigInteger y) {
+        return pool.invoke(new MultiplyTask(x, y));
     }
 
-    @Override
-    protected BigInteger compute() {
-
-      int m = x.bitLength() / 2;
-      if (m <= THRESHOLD * 2) {
-        return x.pow(2);
-      }
-
-      // x = x1 * 2^m + x0
-      BigInteger[] xs = split(x, m);
-
-      // x^2 = (x1 * 2^m + x0)(x1 * 2^m + x0) = z2 * 2^2m + z1 * 2^m + z0
-      // where:
-      // z2 = x1 * x1
-      // z0 = x0 * x0
-      // z1 = x1 * x0 + x0 * x1 = (x1 + x0)(x1 + x0) - z2 - z0
-      SquareTask z2task = new SquareTask(xs[0]);
-      SquareTask z0task = new SquareTask(xs[1]);
-      SquareTask z1task = new SquareTask(add(xs));
-
-      z0task.fork();
-      z2task.fork();
-      BigInteger z0, z2;
-      BigInteger z1 = z1task.invoke().subtract(
-          z2 = z2task.join()).subtract(z0 = z0task.join());
-
-      // result = z2 * 2^2m + z1 * 2^m + z0
-      return z2.shiftLeft(2 * m).add(z1.shiftLeft(m)).add(z0);
+    public BigInteger square(BigInteger x) {
+        return pool.invoke(new SquareTask(x));
     }
-  }
+
+    private static class MultiplyTask extends RecursiveTask<BigInteger> {
+        private final BigInteger x, y;
+
+        public MultiplyTask(BigInteger x, BigInteger y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        protected BigInteger compute() {
+            int m = (Math.min(x.bitLength(), y.bitLength()) / 2);
+            if (m <= THRESHOLD) {
+                return x.multiply(y);
+            }
+
+            // x = x1 * 2^m + x0
+            // y = y1 * 2^m + y0
+            BigInteger[] xs = split(x, m);
+            BigInteger[] ys = split(y, m);
+
+            // xy = (x1 * 2^m + x0)(y1 * 2^m + y0) = z2 * 2^2m + z1 * 2^m + z0
+            // where:
+            // z2 = x1 * y1
+            // z0 = x0 * y0
+            // z1 = x1 * y0 + x0 * y1 = (x1 + x0)(y1 + y0) - z2 - z0
+            MultiplyTask z2task = new MultiplyTask(xs[0], ys[0]);
+            MultiplyTask z0task = new MultiplyTask(xs[1], ys[1]);
+            MultiplyTask z1task = new MultiplyTask(add(xs), add(ys));
+
+            z0task.fork();
+            z2task.fork();
+            BigInteger z0, z2;
+            BigInteger z1 = z1task.invoke().subtract(
+                    z2 = z2task.join()).subtract(z0 = z0task.join());
+
+            // result = z2 * 2^2m + z1 * 2^m + z0
+            return z2.shiftLeft(2 * m).add(z1.shiftLeft(m)).add(z0);
+        }
+    }
+
+    private static class SquareTask extends RecursiveTask<BigInteger> {
+        private final BigInteger x;
+
+        public SquareTask(BigInteger x) {
+            this.x = x;
+        }
+
+        @Override
+        protected BigInteger compute() {
+
+            int m = x.bitLength() / 2;
+            if (m <= THRESHOLD * 2) {
+                return x.pow(2);
+            }
+
+            // x = x1 * 2^m + x0
+            BigInteger[] xs = split(x, m);
+
+            // x^2 = (x1 * 2^m + x0)(x1 * 2^m + x0) = z2 * 2^2m + z1 * 2^m + z0
+            // where:
+            // z2 = x1 * x1
+            // z0 = x0 * x0
+            // z1 = x1 * x0 + x0 * x1 = (x1 + x0)(x1 + x0) - z2 - z0
+            SquareTask z2task = new SquareTask(xs[0]);
+            SquareTask z0task = new SquareTask(xs[1]);
+            SquareTask z1task = new SquareTask(add(xs));
+
+            z0task.fork();
+            z2task.fork();
+            BigInteger z0, z2;
+            BigInteger z1 = z1task.invoke().subtract(
+                    z2 = z2task.join()).subtract(z0 = z0task.join());
+
+            // result = z2 * 2^2m + z1 * 2^m + z0
+            return z2.shiftLeft(2 * m).add(z1.shiftLeft(m)).add(z0);
+        }
+    }
 }

@@ -21,7 +21,7 @@ package eu.javaspecialists.tjsn.examples.issue193.objectfactories;
 import eu.javaspecialists.tjsn.memory.*;
 
 public class BasicObjectFactory implements ObjectFactory {
-  public Object makeObject() {
-    return new Object();
-  }
+    public Object makeObject() {
+        return new Object();
+    }
 }

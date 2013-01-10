@@ -23,26 +23,26 @@ import eu.javaspecialists.tjsn.memory.*;
 import java.util.*;
 
 public class FullMapObjectFactory implements ObjectFactory {
-  private final ObjectFactory factory;
-  private final int numberOfElements;
+    private final ObjectFactory factory;
+    private final int numberOfElements;
 
-  public FullMapObjectFactory(ObjectFactory factory, int numberOfElements) {
-    this.factory = factory;
-    this.numberOfElements = numberOfElements;
-  }
-
-  public FullMapObjectFactory(ObjectFactory factory) {
-    this(factory, 100);
-  }
-
-  public Object makeObject() {
-    return fill((Map) factory.makeObject());
-  }
-
-  protected Map fill(Map map) {
-    for (int i = 0; i < numberOfElements; i++) {
-      map.put(i, "dummy");
+    public FullMapObjectFactory(ObjectFactory factory, int numberOfElements) {
+        this.factory = factory;
+        this.numberOfElements = numberOfElements;
     }
-    return map;
-  }
+
+    public FullMapObjectFactory(ObjectFactory factory) {
+        this(factory, 100);
+    }
+
+    public Object makeObject() {
+        return fill((Map) factory.makeObject());
+    }
+
+    protected Map fill(Map map) {
+        for (int i = 0; i < numberOfElements; i++) {
+            map.put(i, "dummy");
+        }
+        return map;
+    }
 }

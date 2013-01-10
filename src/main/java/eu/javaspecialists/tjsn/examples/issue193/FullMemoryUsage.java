@@ -22,12 +22,12 @@ import eu.javaspecialists.tjsn.examples.issue193.objectfactories.*;
 import eu.javaspecialists.tjsn.memory.*;
 
 public class FullMemoryUsage {
-  public static void main(String[] args) {
-    MemoryTestBench mtb = new MemoryTestBench();
-    mtb.showMemoryUsage(new FullMapObjectFactory(new ConcurrentHashMapFactory()));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new SmallConcurrentHashMapFactory()));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new BigConcurrentHashMapFactory()));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new HashtableFactory()));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new HighlyScalableTableFactory()));
-  }
+    public static void main(String[] args) {
+        MemoryTestBench mtb = new MemoryTestBench();
+        mtb.showMemoryUsage(new FullMapObjectFactory(new ConcurrentHashMapFactory()));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new SmallConcurrentHashMapFactory()));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new BigConcurrentHashMapFactory()));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new HashtableFactory()));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new HighlyScalableTableFactory()));
+    }
 }

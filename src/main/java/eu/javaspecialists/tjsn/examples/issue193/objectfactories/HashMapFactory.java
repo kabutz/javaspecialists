@@ -23,7 +23,7 @@ import eu.javaspecialists.tjsn.memory.*;
 import java.util.*;
 
 public class HashMapFactory implements ObjectFactory {
-  public Object makeObject() {
-    return new HashMap();
-  }
+    public Object makeObject() {
+        return new HashMap();
+    }
 }

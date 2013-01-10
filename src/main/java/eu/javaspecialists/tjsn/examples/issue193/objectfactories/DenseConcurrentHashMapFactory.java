@@ -23,7 +23,7 @@ import eu.javaspecialists.tjsn.memory.*;
 import java.util.concurrent.*;
 
 public class DenseConcurrentHashMapFactory implements ObjectFactory {
-  public Object makeObject() {
-    return new ConcurrentHashMap(16, 1.33f, 16);
-  }
+    public Object makeObject() {
+        return new ConcurrentHashMap(16, 1.33f, 16);
+    }
 }

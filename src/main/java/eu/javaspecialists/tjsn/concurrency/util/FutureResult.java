@@ -28,24 +28,24 @@ package eu.javaspecialists.tjsn.concurrency.util;
  */
 
 public class FutureResult<V> {
-  private V value;
+    private V value;
 
-  private boolean ready;
+    private boolean ready;
 
-  public synchronized V get() throws InterruptedException {
-    while (!ready) {
-      wait(100);
+    public synchronized V get() throws InterruptedException {
+        while (!ready) {
+            wait(100);
+        }
+        return value;
     }
-    return value;
-  }
 
-  public synchronized void set(V newValue) {
-    value = newValue;
-    ready = true;
-    notifyAll();
-  }
+    public synchronized void set(V newValue) {
+        value = newValue;
+        ready = true;
+        notifyAll();
+    }
 
-  public synchronized boolean isReady() {
-    return ready;
-  }
+    public synchronized boolean isReady() {
+        return ready;
+    }
 }

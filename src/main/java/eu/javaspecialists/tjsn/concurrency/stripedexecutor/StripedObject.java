@@ -27,5 +27,5 @@ package eu.javaspecialists.tjsn.concurrency.stripedexecutor;
  * @see StripedExecutorService
  */
 public interface StripedObject {
-  Object getStripe();
+    Object getStripe();
 }

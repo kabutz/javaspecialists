@@ -21,8 +21,8 @@ package eu.javaspecialists.tjsn.examples.issue193.objectfactories;
 import eu.javaspecialists.tjsn.memory.*;
 
 public class LongObjectFactory implements ObjectFactory {
-  public Object makeObject() {
-    return new Long(333L);
-  }
+    public Object makeObject() {
+        return new Long(333L);
+    }
 }
 

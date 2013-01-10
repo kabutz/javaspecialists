@@ -22,7 +22,7 @@ import eu.javaspecialists.tjsn.memory.*;
 import org.cliffc.high_scale_lib.*;
 
 public class DenseHighlyScalableTableFactory implements ObjectFactory {
-  public Object makeObject() {
-    return new NonBlockingHashMap(16);
-  }
+    public Object makeObject() {
+        return new NonBlockingHashMap(16);
+    }
 }

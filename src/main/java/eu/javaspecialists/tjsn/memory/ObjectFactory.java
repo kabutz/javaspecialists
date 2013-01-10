@@ -19,5 +19,5 @@
 package eu.javaspecialists.tjsn.memory;
 
 public interface ObjectFactory {
-  Object makeObject();
+    Object makeObject();
 }

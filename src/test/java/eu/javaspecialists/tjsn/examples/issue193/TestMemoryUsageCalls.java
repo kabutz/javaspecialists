@@ -21,18 +21,18 @@ package eu.javaspecialists.tjsn.examples.issue193;
 import org.junit.*;
 
 public class TestMemoryUsageCalls {
-  @Test
-  public void testMemoryUsage() {
-    MemoryUsage.main(null);
-  }
+    @Test
+    public void testMemoryUsage() {
+        MemoryUsage.main(null);
+    }
 
-  @Test
-  public void testDenseMemoryUsage() {
-    DenseMemoryUsage.main(null);
-  }
+    @Test
+    public void testDenseMemoryUsage() {
+        DenseMemoryUsage.main(null);
+    }
 
-  @Test
-  public void testFullMemoryUsage() {
-    FullMemoryUsage.main(null);
-  }
+    @Test
+    public void testFullMemoryUsage() {
+        FullMemoryUsage.main(null);
+    }
 }

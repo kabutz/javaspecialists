@@ -22,23 +22,23 @@ import eu.javaspecialists.tjsn.examples.issue193.objectfactories.*;
 import eu.javaspecialists.tjsn.memory.*;
 
 public class DenseMemoryUsage {
-  public static void main(String[] args) {
-    MemoryTestBench mtb = new MemoryTestBench();
-    System.out.println("Normal Fill Factor of 0.75 with 10 elements");
-    mtb.showMemoryUsage(new FullMapObjectFactory(new HashMapFactory(), 10));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new HashMapFactory(), 10));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new ConcurrentHashMapFactory(), 10));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new SmallConcurrentHashMapFactory(), 10));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new BigConcurrentHashMapFactory(), 10));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new HashtableFactory(), 10));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new HighlyScalableTableFactory(), 10));
+    public static void main(String[] args) {
+        MemoryTestBench mtb = new MemoryTestBench();
+        System.out.println("Normal Fill Factor of 0.75 with 10 elements");
+        mtb.showMemoryUsage(new FullMapObjectFactory(new HashMapFactory(), 10));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new HashMapFactory(), 10));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new ConcurrentHashMapFactory(), 10));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new SmallConcurrentHashMapFactory(), 10));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new BigConcurrentHashMapFactory(), 10));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new HashtableFactory(), 10));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new HighlyScalableTableFactory(), 10));
 
-    System.out.println("Dense Fill Factor of 1.33 with 10 elements");
-    mtb.showMemoryUsage(new FullMapObjectFactory(new DenseHashMapFactory(), 10));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new DenseConcurrentHashMapFactory(), 10));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new DenseSmallConcurrentHashMapFactory(), 10));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new DenseBigConcurrentHashMapFactory(), 10));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new DenseHashtableFactory(), 10));
-    mtb.showMemoryUsage(new FullMapObjectFactory(new DenseHighlyScalableTableFactory(), 10));
-  }
+        System.out.println("Dense Fill Factor of 1.33 with 10 elements");
+        mtb.showMemoryUsage(new FullMapObjectFactory(new DenseHashMapFactory(), 10));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new DenseConcurrentHashMapFactory(), 10));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new DenseSmallConcurrentHashMapFactory(), 10));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new DenseBigConcurrentHashMapFactory(), 10));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new DenseHashtableFactory(), 10));
+        mtb.showMemoryUsage(new FullMapObjectFactory(new DenseHighlyScalableTableFactory(), 10));
+    }
 }

@@ -22,23 +22,23 @@ import eu.javaspecialists.tjsn.examples.issue193.objectfactories.*;
 import eu.javaspecialists.tjsn.memory.*;
 
 public class MemoryUsage {
-  public static void main(String[] args) {
-    MemoryTestBench mtb = new MemoryTestBench();
-    mtb.showMemoryUsage(new BasicObjectFactory());
-    mtb.showMemoryUsage(new LongObjectFactory());
-    mtb.showMemoryUsage(new IntegerObjectFactory());
+    public static void main(String[] args) {
+        MemoryTestBench mtb = new MemoryTestBench();
+        mtb.showMemoryUsage(new BasicObjectFactory());
+        mtb.showMemoryUsage(new LongObjectFactory());
+        mtb.showMemoryUsage(new IntegerObjectFactory());
 
-    mtb.showMemoryUsage(new HashMapFactory());
-    mtb.showMemoryUsage(new SynchronizedHashMapFactory());
-    mtb.showMemoryUsage(new HashtableFactory());
+        mtb.showMemoryUsage(new HashMapFactory());
+        mtb.showMemoryUsage(new SynchronizedHashMapFactory());
+        mtb.showMemoryUsage(new HashtableFactory());
 
-    mtb.showMemoryUsage(new ReentrantLockFactory());
-    mtb.showMemoryUsage(new ConcurrentHashMapFactory());
-    mtb.showMemoryUsage(new SmallConcurrentHashMapFactory());
-    mtb.showMemoryUsage(new BigConcurrentHashMapFactory());
-    mtb.showMemoryUsage(new HugeConcurrentHashMapFactory());
-    mtb.showMemoryUsage(new HugeConcurrentHashMapV8Factory());
+        mtb.showMemoryUsage(new ReentrantLockFactory());
+        mtb.showMemoryUsage(new ConcurrentHashMapFactory());
+        mtb.showMemoryUsage(new SmallConcurrentHashMapFactory());
+        mtb.showMemoryUsage(new BigConcurrentHashMapFactory());
+        mtb.showMemoryUsage(new HugeConcurrentHashMapFactory());
+        mtb.showMemoryUsage(new HugeConcurrentHashMapV8Factory());
 
-    mtb.showMemoryUsage(new HighlyScalableTableFactory());
-  }
+        mtb.showMemoryUsage(new HighlyScalableTableFactory());
+    }
 }

@@ -23,7 +23,7 @@ import eu.javaspecialists.tjsn.memory.*;
 import java.util.*;
 
 public class DenseHashtableFactory implements ObjectFactory {
-  public Object makeObject() {
-    return new Hashtable(16, 1.33f);
-  }
+    public Object makeObject() {
+        return new Hashtable(16, 1.33f);
+    }
 }

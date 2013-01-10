@@ -21,8 +21,8 @@ package eu.javaspecialists.tjsn.examples.issue193.objectfactories;
 import eu.javaspecialists.tjsn.memory.*;
 
 public class IntegerObjectFactory implements ObjectFactory {
-  public Object makeObject() {
-    return new Integer(333);
-  }
+    public Object makeObject() {
+        return new Integer(333);
+    }
 }
 

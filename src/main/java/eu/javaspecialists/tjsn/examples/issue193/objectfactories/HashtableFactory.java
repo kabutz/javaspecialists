@@ -23,7 +23,7 @@ import eu.javaspecialists.tjsn.memory.*;
 import java.util.*;
 
 public class HashtableFactory implements ObjectFactory {
-  public Object makeObject() {
-    return new Hashtable();
-  }
+    public Object makeObject() {
+        return new Hashtable();
+    }
 }

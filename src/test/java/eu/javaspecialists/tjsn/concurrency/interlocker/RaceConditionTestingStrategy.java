@@ -27,36 +27,36 @@ package eu.javaspecialists.tjsn.concurrency.interlocker;
  * @author Dr Heinz M. Kabutz
  */
 public class RaceConditionTestingStrategy implements InterlockTask<Integer> {
-  private final int upto;
-  private volatile int count;
+    private final int upto;
+    private volatile int count;
 
-  public RaceConditionTestingStrategy(int upto) {
-    this.upto = upto;
-  }
-
-  public boolean isDone() {
-    return count >= upto;
-  }
-
-  public void call() {
-    int temp = count + 1;
-    sleepQuietly();
-    count = temp;
-  }
-
-  private void sleepQuietly() {
-    try {
-      Thread.sleep(10);
-    } catch (InterruptedException e) {
-      Thread.currentThread().interrupt();
+    public RaceConditionTestingStrategy(int upto) {
+        this.upto = upto;
     }
-  }
 
-  public Integer get() {
-    return count;
-  }
+    public boolean isDone() {
+        return count >= upto;
+    }
 
-  public void reset() {
-    count = 0;
-  }
+    public void call() {
+        int temp = count + 1;
+        sleepQuietly();
+        count = temp;
+    }
+
+    private void sleepQuietly() {
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+
+    public Integer get() {
+        return count;
+    }
+
+    public void reset() {
+        count = 0;
+    }
 }
