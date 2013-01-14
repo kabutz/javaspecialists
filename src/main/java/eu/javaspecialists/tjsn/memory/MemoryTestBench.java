@@ -19,8 +19,7 @@
 package eu.javaspecialists.tjsn.memory;
 
 /**
- * From newsletter 193
- * (http://www.javaspecialists.eu/archive/Issue193.html).  Used
+ * From http://www.javaspecialists.eu/archive/Issue193.html.  Used
  * to estimate memory usage by objects.
  *
  * @see eu.javaspecialists.tjsn.examples.issue193.MemoryUsage
