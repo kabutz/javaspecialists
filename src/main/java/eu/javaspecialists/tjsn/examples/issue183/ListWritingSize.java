@@ -27,7 +27,7 @@ public class ListWritingSize {
         test(new ArrayList<String>());
     }
 
-    public static void test(List<String> list) throws IOException {
+    public static int test(List<String> list) throws IOException {
         for (int i = 0; i < 10; i++) {
             list.add("hello world");
         }
@@ -35,7 +35,16 @@ public class ListWritingSize {
         ObjectOutputStream out = new ObjectOutputStream(baos);
         out.writeObject(list);
         out.close();
+        byte[] bytes = baos.toByteArray();
         System.out.println(list.getClass().getSimpleName() +
-                " used " + baos.toByteArray().length + " bytes");
+                " used " + bytes.length + " bytes : " + format(bytes));
+        return bytes.length;
+    }
+
+    private static String format(byte[] bytes) {
+        String result = new String(bytes);
+        result = result.replaceAll("\n", "\\n");
+        result = result.replaceAll("\r", "\\r");
+        return result;
     }
 }
