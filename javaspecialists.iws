@@ -1,22 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
-    <list id="5c447008-9653-4c89-b48a-29e2b5e8cf7c" name="Default" comment="Added test to check that the parallel fibonacci solution really does parallelize the work." />
     <list default="true" id="ecd1422d-0b60-43c5-b99b-60eb800de7cc" name="New changelist" comment="Clown puzzle by W">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue223/ManagedLivenessQueueDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue223/ManagedReentrantLockDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue223/PrintlnFun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaspecialists.iws" afterPath="$PROJECT_DIR$/javaspecialists.iws" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/Dice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/DiceFair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/DiceFast.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/DiceFastFixedMod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/DiceMeasurer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/DiceOptimized.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/DiceVeryFast.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/EfiBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameObserverDetailed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameObserverPrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameObserverSummary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameOptimized.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameReversed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameSimulationMixedBoardsSingleDice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameSimulationSingleBoardMixedDice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameSimulationSingleBoardSingleDice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameSimulationSingleBoardSingleDiceLotsOfPlayers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameStarterTwoBoards.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameTimed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/SimpleGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/Simulation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/TournamentObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaspecialists.iml" beforeDir="false" afterPath="$PROJECT_DIR$/javaspecialists.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaspecialists.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/javaspecialists.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaspecialists.iws" beforeDir="false" afterPath="$PROJECT_DIR$/javaspecialists.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
-    <ignored path="javaspecialists.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <option name="TRACKING_ENABLED" value="true" />
+    <list id="5c447008-9653-4c89-b48a-29e2b5e8cf7c" name="Default" comment="Added test to check that the parallel fibonacci solution really does parallelize the work." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/javaspecialists$MathTeaser.ic" NAME="MathTeaser Coverage Results" MODIFIED="1337260962117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>eu.javaspecialists.tjsn.examples.issue198.*</FILTER>
@@ -71,9 +95,6 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
   <component name="DatabaseView">
     <flatten value="false" />
     <groupTables value="false" />
@@ -118,126 +139,8 @@
     <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="javaspecialists" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1098" max-vertical-offset="1242">
-              <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Interruptions.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/util/Interruptions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1377">
-              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FutureResult.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/util/FutureResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
-              <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ManagedReentrantLock.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/locks/ManagedReentrantLock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4563">
-              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#7066#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ManagedBlockers.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/util/ManagedBlockers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2347">
-              <caret line="18" column="48" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#3349#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MonitorUtils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/util/MonitorUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1051">
-              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ManagedReentrantLockDemo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue223/ManagedReentrantLockDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1195">
-              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ManagedLivenessQueueDemo.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue223/ManagedLivenessQueueDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.05077574" vertical-offset="0" max-vertical-offset="1411">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrintlnFun.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue223/PrintlnFun.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="961">
-              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ManagedReentrantLockTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/concurrency/locks/ManagedReentrantLockTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6744">
-              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="18" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#10977#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -294,7 +197,6 @@
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
         <option name="keepSourceFolders" value="false" />
       </MavenImportingSettings>
     </option>
@@ -318,6 +220,7 @@
     <option name="width" value="1436" />
     <option name="height" value="878" />
   </component>
+  <component name="ProjectId" id="1vekncHoYmmDOnFSQAyoU64C7jY" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -385,15 +288,8 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="2" />
@@ -701,54 +597,54 @@
       </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue076" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/javaspecialists.ipr" />
-    <property name="project.structure.side.proportion" value="0.47976875" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue076" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291" />
+    <property name="options.lastSelected" value="preferences.sourceCode" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.47976875" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="eu.javaspecialists.tjsn.util.codegen.proxy" />
-      <recent name="eu.javaspecialists.tjsn.proxy" />
-      <recent name="eu.javaspecialists.tjsn.examples.issue184" />
-      <recent name="eu.javaspecialists.tjsn.examples.issue199.dream" />
-      <recent name="eu.javaspecialists.tjsn.examples.issue199.sleep" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue193" />
-      <recent name="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue188" />
-      <recent name="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187" />
-      <recent name="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/examples/issue198" />
-      <recent name="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/concurrency/stripedexecutor" />
-    </key>
-    <key name="MoveMembersDialog.RECENTS_KEY">
-      <recent name="BigIntegerUtils" />
-      <recent name="eu.javaspecialists.tjsn.math.numbers.BasicKaratsuba" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="eu.javaspecialists.tjsn.proxy" />
       <recent name="eu.javaspecialists.tjsn.examples.issue199.clowns" />
       <recent name="eu.javaspecialists.tjsn.examples.issue194" />
       <recent name="eu.javaspecialists.tjsn.memory" />
       <recent name="eu.javaspecialists.tjsn.concurrency.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291" />
+      <recent name="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue193" />
+      <recent name="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue188" />
+      <recent name="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue187" />
+      <recent name="$PROJECT_DIR$/src/test/java/eu/javaspecialists/tjsn/examples/issue198" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="BigIntegerUtils" />
+      <recent name="eu.javaspecialists.tjsn.math.numbers.BasicKaratsuba" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="eu.javaspecialists.tjsn.examples.issue076" />
@@ -757,201 +653,54 @@
       <recent name="eu.javaspecialists.tjsn.reflect" />
       <recent name="eu.javaspecialists.tjsn.jmatia.server" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="eu.javaspecialists.tjsn.util.codegen.proxy" />
+      <recent name="eu.javaspecialists.tjsn.proxy" />
+      <recent name="eu.javaspecialists.tjsn.examples.issue184" />
+      <recent name="eu.javaspecialists.tjsn.examples.issue199.dream" />
+      <recent name="eu.javaspecialists.tjsn.examples.issue199.sleep" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.ManagedReentrantLockTest">
-    <configuration default="false" name="MakeAlloMonde" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="eu.javaspecialists.tjsn.examples.issue209.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.examples.issue209.MakeAlloMonde" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="javaspecialists" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="AlloMondeTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="eu.javaspecialists.tjsn.examples.issue209.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="javaspecialists" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="eu.javaspecialists.tjsn.examples.issue209" />
-      <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.examples.issue209.AlloMondeTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="NormalizeTest" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="eu.javaspecialists.tjsn.examples.issue211.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.examples.issue211.NormalizeTest" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="javaspecialists" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="VirtualMachineLiveLock" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="eu.javaspecialists.tjsn.examples.issue188.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.examples.issue188.VirtualMachineLiveLock" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="javaspecialists" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ManagedReentrantLockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="eu.javaspecialists.tjsn.concurrency.locks.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="javaspecialists" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="eu.javaspecialists.tjsn.concurrency.locks" />
-      <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.concurrency.locks.ManagedReentrantLockTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="depsClasspath" value="false" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings">
-          <MavenGeneralSettings>
-            <option name="alwaysUpdateSnapshots" value="false" />
-            <option name="checksumPolicy" value="FAIL" />
-            <option name="failureBehavior" value="FAST" />
-            <option name="localRepository" value="" />
-            <option name="mavenHome" value="" />
-            <option name="nonRecursive" value="false" />
-            <option name="outputLevel" value="INFO" />
-            <option name="pluginUpdatePolicy" value="DO_NOT_UPDATE" />
-            <option name="printErrorStackTraces" value="false" />
-            <option name="threads" />
-            <option name="usePluginRegistry" value="false" />
-            <option name="userSettingsFile" value="" />
-            <option name="workOffline" value="false" />
-          </MavenGeneralSettings>
-        </option>
-        <option name="myRunnerSettings">
-          <MavenRunnerSettings>
-            <option name="environmentProperties">
-              <map />
-            </option>
-            <option name="jreName" value="openjdk version &quot;1.7.0-internal&quot;" />
-            <option name="mavenProperties">
-              <map />
-            </option>
-            <option name="passParentEnv" value="true" />
-            <option name="runMavenInBackground" value="true" />
-            <option name="skipTests" value="false" />
-            <option name="vmOptions" value="" />
-          </MavenRunnerSettings>
-        </option>
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list />
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -965,55 +714,6 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
@@ -1051,27 +751,6 @@
       <option name="usbDebugPort" value="7936" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
       <option name="BCName" value="" />
       <option name="launcherParameters">
@@ -1086,87 +765,226 @@
       <option name="trusted" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.MakeAlloMonde" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.AlloMondeTest" />
-      <item index="2" class="java.lang.String" itemvalue="Application.NormalizeTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.VirtualMachineLiveLock" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ManagedReentrantLockTest" />
-    </list>
-    <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ManagedReentrantLockTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.VirtualMachineLiveLock" />
-        <item index="2" class="java.lang.String" itemvalue="Application.NormalizeTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.AlloMondeTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.MakeAlloMonde" />
-      </list>
-    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
+    <configuration name="MakeAlloMonde" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.examples.issue209.MakeAlloMonde" />
+      <module name="javaspecialists" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="eu.javaspecialists.tjsn.examples.issue209.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NormalizeTest" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.examples.issue211.NormalizeTest" />
+      <module name="javaspecialists" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="eu.javaspecialists.tjsn.examples.issue211.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VirtualMachineLiveLock" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.examples.issue188.VirtualMachineLiveLock" />
+      <module name="javaspecialists" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="eu.javaspecialists.tjsn.examples.issue188.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="grailsApplicationRoot" value="" />
+      <setting name="launchBrowser" value="false" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AlloMondeTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="javaspecialists" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="eu.javaspecialists.tjsn.examples.issue209.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="eu.javaspecialists.tjsn.examples.issue209" />
+      <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.examples.issue209.AlloMondeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagedReentrantLockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javaspecialists" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="eu.javaspecialists.tjsn.concurrency.locks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="eu.javaspecialists.tjsn.concurrency.locks" />
+      <option name="MAIN_CLASS_NAME" value="eu.javaspecialists.tjsn.concurrency.locks.ManagedReentrantLockTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings">
+          <MavenGeneralSettings>
+            <option name="alwaysUpdateSnapshots" value="false" />
+            <option name="checksumPolicy" value="FAIL" />
+            <option name="failureBehavior" value="FAST" />
+            <option name="localRepository" value="" />
+            <option name="mavenHome" value="" />
+            <option name="nonRecursive" value="false" />
+            <option name="outputLevel" value="INFO" />
+            <option name="pluginUpdatePolicy" value="DO_NOT_UPDATE" />
+            <option name="printErrorStackTraces" value="false" />
+            <option name="showDialogWithAdvancedSettings" value="false" />
+            <option name="threads" />
+            <option name="usePluginRegistry" value="false" />
+            <option name="userSettingsFile" value="" />
+            <option name="workOffline" value="false" />
+          </MavenGeneralSettings>
+        </option>
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="openjdk version &quot;1.7.0-internal&quot;" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="" />
+          </MavenRunnerSettings>
+        </option>
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MakeAlloMonde" />
+      <item itemvalue="Application.NormalizeTest" />
+      <item itemvalue="Application.VirtualMachineLiveLock" />
+      <item itemvalue="JUnit.AlloMondeTest" />
+      <item itemvalue="JUnit.ManagedReentrantLockTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ManagedReentrantLockTest" />
+        <item itemvalue="Application.VirtualMachineLiveLock" />
+        <item itemvalue="Application.NormalizeTest" />
+        <item itemvalue="JUnit.AlloMondeTest" />
+        <item itemvalue="Application.MakeAlloMonde" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SliceManager">
     <option name="analysisUIOptions">
       <AnalysisUIOptions />
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -1191,341 +1009,356 @@
       <changelist id="5c447008-9653-4c89-b48a-29e2b5e8cf7c" name="Default" comment="" />
       <changelist id="ecd1422d-0b60-43c5-b99b-60eb800de7cc" name="New changelist" comment="" />
       <created>1337166845598</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1339596628753</updated>
       <workItem from="1417157581948" duration="102000" />
       <workItem from="1417157685751" duration="141000" />
       <workItem from="1417157827708" duration="946000" />
-    </task>
-    <task id="LOCAL-00001" summary="new maven project&#10;">
-      <created>1337166984152</created>
-      <updated>1337166984152</updated>
-    </task>
-    <task id="LOCAL-00002" summary="StripedExecutorService allows tasks to be executed in a specific order.">
-      <created>1337168647945</created>
-      <updated>1337168647945</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Added sample files from newsletter #198 - showing how we can calculate the highest random number">
-      <created>1337269003951</created>
-      <updated>1337269003951</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added interlocker files from newsletter 188, including a sample that shows how the JVM can livelock.">
-      <created>1337283209018</created>
-      <updated>1337283209018</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Added javadocs.">
-      <created>1337283236531</created>
-      <updated>1337283236531</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Extremely dangerous class that can livelock a JVM since JDK 1.6.0_14 up to 1.7.0_u4 at least.">
-      <created>1337283278294</created>
-      <updated>1337283278294</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Made the class testable">
-      <created>1337283307346</created>
-      <updated>1337283307346</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Added JavaDocs">
-      <created>1337283322642</created>
-      <updated>1337283322642</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Added sample files from newsletter #187 - demonstrating how exceptions are reused in the JVM if they happen frequently.">
-      <created>1337283475767</created>
-      <updated>1337283475767</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Turned off DEBUG, so finalizers will not be called anymore">
-      <created>1337797881102</created>
-      <updated>1337797881102</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Turned off DEBUG, so finalizers will not be called anymore">
-      <created>1337797939828</created>
-      <updated>1337797939828</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Added JavaDocs, noting a brief description of the class and the author.">
-      <created>1337799355904</created>
-      <updated>1337799355904</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Added JavaDocs, noting a brief description of the class and the author.">
-      <created>1337799371989</created>
-      <updated>1337799371989</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Karatsuba multiplication algorithms for BigInteger, also using fork/join for ParallelKaratsuba.">
-      <created>1337799428340</created>
-      <updated>1337799428340</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Various Fibonacci calculators.  The fastest, the recursive parallel dijkstra karatsuba, can solve Fibonacci one billion in about 20 hours on an 8 core machine in Java.">
-      <created>1337799483623</created>
-      <updated>1337799483623</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Added test to check that the parallel fibonacci solution really does parallelize the work.">
-      <created>1337800128321</created>
-      <updated>1337800128321</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Added system properties for controlling the threshold when plain BigInteger.multiply() is used.  This can be used as a tuning parameter.">
-      <created>1337848656437</created>
-      <updated>1337848656437</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Changed exception text to use the MAXIMUM_PRECISE_NUMBER field value.">
-      <created>1337848762624</created>
-      <updated>1337848762624</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Added threshold tuning parameter to parallel fibonacci solution.">
-      <created>1337849156461</created>
-      <updated>1337849156461</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Changed FibonacciCache to add cache reservation scheme to avoid calculating the same value twice in a parallel algorithm.">
-      <created>1337861057884</created>
-      <updated>1337861057884</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Changed special multiply character in comments to the default * as it was causing problems compiling on some systems.">
-      <created>1337861477304</created>
-      <updated>1337861477304</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Changed special minus character to normal &quot;-&quot;.">
-      <created>1337861628871</created>
-      <updated>1337861628871</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Removed reset() from cache.  If you want to clear it, just release the handle to your Fibonacci instance.">
-      <created>1337892545602</created>
-      <updated>1337892545602</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Added check for n &lt; 0.">
-      <created>1337892575779</created>
-      <updated>1337892575779</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Published under Apache 2.0 license">
-      <created>1339596597887</created>
-      <updated>1339596597887</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Updated comments">
-      <created>1339602673114</created>
-      <updated>1339602673114</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Added examples from newsletter #203">
-      <created>1339602710505</created>
-      <updated>1339602710505</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Removed Takahashi from test as it does not cancel fast enough.">
-      <created>1339602868700</created>
-      <updated>1339602868700</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Added the FutureResult, based on Doug Lea's class and modified FibonacciCache according to Joe Bowbeer's suggestions">
-      <created>1350641005430</created>
-      <updated>1350641005430</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Some tests commented out to make build pass.">
-      <created>1350644488922</created>
-      <updated>1350644488922</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Touched file to trigger Jenkins automatic refresh.">
-      <created>1350644948370</created>
-      <updated>1350644948370</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Additional test code to test dependencies between results in the FibonacciCache">
-      <created>1350649011042</created>
-      <updated>1350649011042</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Changed setup and teardown methods to be static for test class">
-      <created>1350649263100</created>
-      <updated>1350649263100</updated>
-    </task>
-    <task id="LOCAL-00035" summary="debug info for FutureResult">
-      <created>1350650194827</created>
-      <updated>1350650194827</updated>
+      <workItem from="1626930112363" duration="260000" />
+      <workItem from="1626930381967" duration="335000" />
     </task>
     <task id="LOCAL-00036" summary="Added timeout to wait of 100ms">
       <created>1350650326482</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
       <updated>1350650326482</updated>
     </task>
     <task id="LOCAL-00037" summary="conditional output if we have to wait and value is not ready">
       <created>1350650379764</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
       <updated>1350650379764</updated>
     </task>
     <task id="LOCAL-00038" summary="Removed deadlock from new FibonacciCache">
       <created>1350657593933</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
       <updated>1350657593933</updated>
     </task>
     <task id="LOCAL-00039" summary="Added back the parallel tests">
       <created>1350658123416</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
       <updated>1350658123416</updated>
     </task>
     <task id="LOCAL-00040" summary="Added timer to print out f/j pool in parallel test">
       <created>1350658804688</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
       <updated>1350658804688</updated>
     </task>
     <task id="LOCAL-00041" summary="New changelist">
       <created>1350660056363</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
       <updated>1350660056363</updated>
     </task>
     <task id="LOCAL-00042" summary="Added logging to recursive parallel">
       <created>1350661364522</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
       <updated>1350661364522</updated>
     </task>
     <task id="LOCAL-00043" summary="commented out logging code in FibonacciTask">
       <created>1350664344922</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
       <updated>1350664344922</updated>
     </task>
     <task id="LOCAL-00044" summary="Fixed EvenOddPerformanceTest that sometimes overwrote lock free results.">
       <created>1350675348760</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
       <updated>1350675348760</updated>
     </task>
     <task id="LOCAL-00045" summary="Added new implementation of FibonacciSolver by Joe Bowbeer">
       <created>1350967872340</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
       <updated>1350967872340</updated>
     </task>
     <task id="LOCAL-00046" summary="Changed Math.random() to use ThreadLocalRandom or Random directly.">
       <created>1352120205470</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
       <updated>1352120205470</updated>
     </task>
     <task id="LOCAL-00047" summary="Added comments to the StripedExecutorService.">
       <created>1352211624174</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
       <updated>1352211624174</updated>
     </task>
     <task id="LOCAL-00048" summary="Added TristateCheckBox from newsletter #145.">
       <created>1352747393872</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
       <updated>1352747393872</updated>
     </task>
     <task id="LOCAL-00049" summary="Updated reference to JFrame constant to instead point to WindowConstants">
       <created>1352747456074</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
       <updated>1352747456074</updated>
     </task>
     <task id="LOCAL-00050" summary="Updated comments">
       <created>1352747649414</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
       <updated>1352747649414</updated>
     </task>
     <task id="LOCAL-00051" summary="Added demos that show how the SerialExecutor works">
       <created>1352819863107</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
       <updated>1352819863107</updated>
     </task>
     <task id="LOCAL-00052" summary="Added demos that show how the SerialExecutor works">
       <created>1352824740051</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
       <updated>1352824740053</updated>
     </task>
     <task id="LOCAL-00053" summary="Added toString methods to the StripedExecutorService for debugging purposes.">
       <created>1353228331774</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
       <updated>1353228331774</updated>
     </task>
     <task id="LOCAL-00054" summary="Updated Copyright and added classes from Issue193">
       <created>1357756650621</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
       <updated>1357756650622</updated>
     </task>
     <task id="LOCAL-00055" summary="Calls the memory usage classes to make sure that they run">
       <created>1357760375720</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
       <updated>1357760375721</updated>
     </task>
     <task id="LOCAL-00056" summary="Moved to the correct package.">
       <created>1357760395936</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
       <updated>1357760395937</updated>
     </task>
     <task id="LOCAL-00057" summary="Added examples from Issue 196, Uncaught AWT Exceptions in Java 7">
       <created>1357812656573</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
       <updated>1357812656573</updated>
     </task>
     <task id="LOCAL-00058" summary="Changed indentation size back to 4.">
       <created>1357813568460</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
       <updated>1357813568461</updated>
     </task>
     <task id="LOCAL-00059" summary="Added issue 194 example files">
       <created>1357824587504</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
       <updated>1357824587505</updated>
     </task>
     <task id="LOCAL-00060" summary="Added utility classes for Issue 194.">
       <created>1357824611051</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
       <updated>1357824611051</updated>
     </task>
     <task id="LOCAL-00061" summary="Marked classes final to limit abuse.">
       <created>1357855403422</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
       <updated>1357855403426</updated>
     </task>
     <task id="LOCAL-00062" summary="Added support for read and write locks and took away inner classes.">
       <created>1357855462934</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
       <updated>1357855462934</updated>
     </task>
     <task id="LOCAL-00063" summary="Added comment explaining how to use the AutoLock.">
       <created>1357855970308</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
       <updated>1357855970308</updated>
     </task>
     <task id="LOCAL-00064" summary="Example files for AutoLock, newsletter 190.">
       <created>1357856370675</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
       <updated>1357856370675</updated>
     </task>
     <task id="LOCAL-00065" summary="Added unit test to verify that escape analysis gets rid of AutoLock objects.">
       <created>1357922106942</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
       <updated>1357922106942</updated>
     </task>
     <task id="LOCAL-00066" summary="Changed to include JAR files">
       <created>1357922125915</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
       <updated>1357922125915</updated>
     </task>
     <task id="LOCAL-00067" summary="Added example file for how to lock interruptibly with AutoLock.">
       <created>1357931172415</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
       <updated>1357931172418</updated>
     </task>
     <task id="LOCAL-00068" summary="Removed commented out debug statements that were there to find a resource &#10;deadlock.">
       <created>1358011714135</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
       <updated>1358011714135</updated>
     </task>
     <task id="LOCAL-00069" summary="Example files for newsletter 192.">
       <created>1358156807996</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
       <updated>1358156807996</updated>
     </task>
     <task id="LOCAL-00070" summary="Example files for newsletter 191.">
       <created>1358156840822</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
       <updated>1358156840822</updated>
     </task>
     <task id="LOCAL-00071" summary="Updated comment.">
       <created>1358156916553</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
       <updated>1358156916553</updated>
     </task>
     <task id="LOCAL-00072" summary="Added CacheTester from issue 204 newsletter">
       <created>1358157176483</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
       <updated>1358157176484</updated>
     </task>
     <task id="LOCAL-00073" summary="Clown and dream puzzles by Wouter Coekaerts">
       <created>1358162184054</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
       <updated>1358162184055</updated>
     </task>
     <task id="LOCAL-00074" summary="Sample files for newsletter 185">
       <created>1358173292390</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
       <updated>1358173292390</updated>
     </task>
     <task id="LOCAL-00075" summary="Sample file for newsletter 197">
       <created>1358173309187</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
       <updated>1358173309187</updated>
     </task>
     <task id="LOCAL-00076" summary="Examples for newsletter 184">
       <created>1358342368987</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
       <updated>1358342368987</updated>
     </task>
     <task id="LOCAL-00077" summary="Supporting files for newsletter 183.">
       <created>1358425554938</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
       <updated>1358425554938</updated>
     </task>
     <task id="LOCAL-00078" summary="Added tests and additional output for newsletter 183 to make sure things &#10;don't change in Java without us knowing about.">
       <created>1358426801422</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
       <updated>1358426801423</updated>
     </task>
     <task id="LOCAL-00079" summary="Basic implementation of a remote monitoring system for watching screen &#10;updates and sending events back to the student machine.">
       <created>1358428309757</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
       <updated>1358428309758</updated>
     </task>
     <task id="LOCAL-00080" summary="Java Code Generators from newsletter 180">
       <created>1358542004570</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
       <updated>1358542004570</updated>
     </task>
     <task id="LOCAL-00081" summary="Virtual Proxy generators using dynamic proxies and code generators, &#10;from newsletter 181.">
       <created>1358542827262</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
       <updated>1358542827263</updated>
     </task>
     <task id="LOCAL-00082" summary="Ideas for various types of lazy initializers of values.  Not published yet.">
       <created>1358542860622</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
       <updated>1358542860622</updated>
     </task>
     <task id="LOCAL-00083" summary="Classes from newsletter 076 - As Time Goes By">
       <created>1362261581369</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
       <updated>1362261581369</updated>
     </task>
     <task id="LOCAL-00084" summary="Issue209 supporting files">
       <created>1365665960700</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
       <updated>1365665960700</updated>
     </task>
     <option name="localTasksCounter" value="85" />
@@ -1592,6 +1425,9 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="UpdateCopyrightCheckinHandler">
     <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
@@ -1603,15 +1439,9 @@
       <collection />
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
     <MESSAGE value="Added utility classes for Issue 194." />
     <MESSAGE value="Marked classes final to limit abuse." />
     <MESSAGE value="Added support for read and write locks and took away inner classes." />
@@ -1641,9 +1471,6 @@
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -2166,4 +1993,3 @@
     </states>
   </component>
 </project>
-
