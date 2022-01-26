@@ -4,42 +4,17 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecd1422d-0b60-43c5-b99b-60eb800de7cc" name="New changelist" comment="Clown puzzle by W">
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/Dice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/DiceFair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/DiceFast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/DiceFastFixedMod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/DiceMeasurer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/DiceOptimized.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/DiceVeryFast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/EfiBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameObserverDetailed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameObserverPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameObserverSummary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameOptimized.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameReversed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameSimulationMixedBoardsSingleDice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameSimulationSingleBoardMixedDice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameSimulationSingleBoardSingleDice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameSimulationSingleBoardSingleDiceLotsOfPlayers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameStarterTwoBoards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/GameTimed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/SimpleGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/Simulation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291/TournamentObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javaspecialists.iml" beforeDir="false" afterPath="$PROJECT_DIR$/javaspecialists.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javaspecialists.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/javaspecialists.ipr" afterDir="false" />
+    <list default="true" id="ecd1422d-0b60-43c5-b99b-60eb800de7cc" name="New changelist" comment="Newsletter 291 code">
       <change beforePath="$PROJECT_DIR$/javaspecialists.iws" beforeDir="false" afterPath="$PROJECT_DIR$/javaspecialists.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <list id="5c447008-9653-4c89-b48a-29e2b5e8cf7c" name="Default" comment="Added test to check that the parallel fibonacci solution really does parallelize the work." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/javaspecialists$MathTeaser.ic" NAME="MathTeaser Coverage Results" MODIFIED="1337260962117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
@@ -617,6 +592,10 @@
     <property name="dynamic.classpath" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue076" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/eu/javaspecialists/tjsn/examples/issue291" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="options.lastSelected" value="preferences.sourceCode" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -1016,14 +995,8 @@
       <workItem from="1417157685751" duration="141000" />
       <workItem from="1417157827708" duration="946000" />
       <workItem from="1626930112363" duration="260000" />
-      <workItem from="1626930381967" duration="335000" />
-    </task>
-    <task id="LOCAL-00036" summary="Added timeout to wait of 100ms">
-      <created>1350650326482</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1350650326482</updated>
+      <workItem from="1626930381967" duration="6344000" />
+      <workItem from="1627894235834" duration="24000" />
     </task>
     <task id="LOCAL-00037" summary="conditional output if we have to wait and value is not ready">
       <created>1350650379764</created>
@@ -1361,7 +1334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1365665960700</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Newsletter 291 code">
+      <created>1626930772265</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1626930772265</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1428,9 +1408,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UpdateCopyrightCheckinHandler">
-    <option name="UPDATE_COPYRIGHT" value="true" />
-  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -1442,7 +1419,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added utility classes for Issue 194." />
     <MESSAGE value="Marked classes final to limit abuse." />
     <MESSAGE value="Added support for read and write locks and took away inner classes." />
     <MESSAGE value="Added comment explaining how to use the AutoLock." />
@@ -1467,7 +1443,8 @@
     <MESSAGE value="Ideas for various types of lazy initializers of values.  Not published yet." />
     <MESSAGE value="Classes from newsletter 076 - As Time Goes By" />
     <MESSAGE value="Issue209 supporting files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Issue209 supporting files" />
+    <MESSAGE value="Newsletter 291 code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Newsletter 291 code" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
